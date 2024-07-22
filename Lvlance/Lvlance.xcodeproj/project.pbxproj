@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED42C4E78D600E8F182 /* MicSelectView.swift */; };
+		B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED62C4E78E400E8F182 /* BandSettingView.swift */; };
+		B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED82C4E78FF00E8F182 /* SideBarView.swift */; };
+		B57DBEDB2C4E791000E8F182 /* PlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBEDA2C4E791000E8F182 /* PlayingView.swift */; };
+		B59724B42C4909CD0027990A /* LvlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B32C4909CD0027990A /* LvlanceApp.swift */; };
+		B59724B62C4909CD0027990A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B52C4909CD0027990A /* ContentView.swift */; };
+		B59724B82C4909CF0027990A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724B72C4909CF0027990A /* Assets.xcassets */; };
+		B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724BA2C4909CF0027990A /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B57DBED42C4E78D600E8F182 /* MicSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicSelectView.swift; sourceTree = "<group>"; };
+		B57DBED62C4E78E400E8F182 /* BandSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandSettingView.swift; sourceTree = "<group>"; };
+		B57DBED82C4E78FF00E8F182 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
+		B57DBEDA2C4E791000E8F182 /* PlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingView.swift; sourceTree = "<group>"; };
+		B59724B02C4909CD0027990A /* Lvlance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lvlance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59724B32C4909CD0027990A /* LvlanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LvlanceApp.swift; sourceTree = "<group>"; };
+		B59724B52C4909CD0027990A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B59724B72C4909CF0027990A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B59724BA2C4909CF0027990A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B59724BC2C4909CF0027990A /* Lvlance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lvlance.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B59724AD2C4909CD0027990A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B57DBECB2C4E4BD700E8F182 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B57DBECD2C4E4C0A00E8F182 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B57DBECE2C4E4C4700E8F182 /* MicSelect */,
+				B57DBECF2C4E4C6C00E8F182 /* BandSetting */,
+				B57DBED12C4E4CED00E8F182 /* Playing */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B57DBECE2C4E4C4700E8F182 /* MicSelect */ = {
+			isa = PBXGroup;
+			children = (
+				B57DBED42C4E78D600E8F182 /* MicSelectView.swift */,
+			);
+			path = MicSelect;
+			sourceTree = "<group>";
+		};
+		B57DBECF2C4E4C6C00E8F182 /* BandSetting */ = {
+			isa = PBXGroup;
+			children = (
+				B57DBED62C4E78E400E8F182 /* BandSettingView.swift */,
+				B57DBED02C4E4C9600E8F182 /* SideBar */,
+			);
+			path = BandSetting;
+			sourceTree = "<group>";
+		};
+		B57DBED02C4E4C9600E8F182 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				B57DBED82C4E78FF00E8F182 /* SideBarView.swift */,
+			);
+			path = SideBar;
+			sourceTree = "<group>";
+		};
+		B57DBED12C4E4CED00E8F182 /* Playing */ = {
+			isa = PBXGroup;
+			children = (
+				B57DBEDA2C4E791000E8F182 /* PlayingView.swift */,
+			);
+			path = Playing;
+			sourceTree = "<group>";
+		};
+		B57DBED22C4E4D1100E8F182 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B57DBED32C4E4E7400E8F182 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B57DBEDC2C4E792C00E8F182 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B59724B72C4909CF0027990A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B59724A72C4909CD0027990A = {
+			isa = PBXGroup;
+			children = (
+				B59724B22C4909CD0027990A /* Lvlance */,
+				B59724B12C4909CD0027990A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B59724B12C4909CD0027990A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B59724B02C4909CD0027990A /* Lvlance.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B59724B22C4909CD0027990A /* Lvlance */ = {
+			isa = PBXGroup;
+			children = (
+				B59724B32C4909CD0027990A /* LvlanceApp.swift */,
+				B57DBECB2C4E4BD700E8F182 /* Model */,
+				B57DBED22C4E4D1100E8F182 /* Manager */,
+				B57DBECD2C4E4C0A00E8F182 /* Views */,
+				B57DBED32C4E4E7400E8F182 /* Extensions */,
+				B57DBEDC2C4E792C00E8F182 /* Resources */,
+				B59724B52C4909CD0027990A /* ContentView.swift */,
+				B59724BC2C4909CF0027990A /* Lvlance.entitlements */,
+				B59724B92C4909CF0027990A /* Preview Content */,
+			);
+			path = Lvlance;
+			sourceTree = "<group>";
+		};
+		B59724B92C4909CF0027990A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B59724BA2C4909CF0027990A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B59724AF2C4909CD0027990A /* Lvlance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B59724BF2C4909CF0027990A /* Build configuration list for PBXNativeTarget "Lvlance" */;
+			buildPhases = (
+				B59724AC2C4909CD0027990A /* Sources */,
+				B59724AD2C4909CD0027990A /* Frameworks */,
+				B59724AE2C4909CD0027990A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lvlance;
+			productName = Lvlance;
+			productReference = B59724B02C4909CD0027990A /* Lvlance.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B59724A82C4909CD0027990A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					B59724AF2C4909CD0027990A = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = B59724AB2C4909CD0027990A /* Build configuration list for PBXProject "Lvlance" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B59724A72C4909CD0027990A;
+			productRefGroup = B59724B12C4909CD0027990A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B59724AF2C4909CD0027990A /* Lvlance */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B59724AE2C4909CD0027990A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */,
+				B59724B82C4909CF0027990A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B59724AC2C4909CD0027990A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */,
+				B59724B62C4909CD0027990A /* ContentView.swift in Sources */,
+				B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */,
+				B57DBEDB2C4E791000E8F182 /* PlayingView.swift in Sources */,
+				B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */,
+				B59724B42C4909CD0027990A /* LvlanceApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B59724BD2C4909CF0027990A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B59724BE2C4909CF0027990A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B59724C02C4909CF0027990A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lvlance/Lvlance.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
+				DEVELOPMENT_TEAM = 2WSJ3W54FF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sophia.Lvlance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B59724C12C4909CF0027990A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lvlance/Lvlance.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
+				DEVELOPMENT_TEAM = 2WSJ3W54FF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sophia.Lvlance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B59724AB2C4909CD0027990A /* Build configuration list for PBXProject "Lvlance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59724BD2C4909CF0027990A /* Debug */,
+				B59724BE2C4909CF0027990A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B59724BF2C4909CF0027990A /* Build configuration list for PBXNativeTarget "Lvlance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59724C02C4909CF0027990A /* Debug */,
+				B59724C12C4909CF0027990A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B59724A82C4909CD0027990A /* Project object */;
+}
