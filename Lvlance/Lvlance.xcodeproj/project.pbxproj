@@ -45,6 +45,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF11F9E62C57C6B00009E685 /* SoundProcessing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SoundProcessing;
+			sourceTree = "<group>";
+		};
 		B57DBECB2C4E4BD700E8F182 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +107,7 @@
 		B57DBED22C4E4D1100E8F182 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				AF11F9E62C57C6B00009E685 /* SoundProcessing */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
