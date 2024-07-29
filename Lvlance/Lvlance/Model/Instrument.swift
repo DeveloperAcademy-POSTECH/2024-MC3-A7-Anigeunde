@@ -14,6 +14,21 @@ enum InstrumentType: String, CaseIterable {
     case electric
     case drum
     
+    var soundLabel: String {
+        switch self {
+        case .vocal:
+            "singing"
+        case .keyboard:
+            "piano"
+        case .bass:
+            "bass_guitar"
+        case .electric:
+            "guitar"
+        case .drum:
+            "drum"
+        }
+    }
+    
     var krName: String {
         switch self {
         case .vocal:
