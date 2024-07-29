@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF11F9E92C57CC850009E685 /* SoundIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9E82C57CC850009E685 /* SoundIdentifier.swift */; };
 		B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED42C4E78D600E8F182 /* MicSelectView.swift */; };
 		B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED62C4E78E400E8F182 /* BandSettingView.swift */; };
 		B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED82C4E78FF00E8F182 /* SideBarView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF11F9E82C57CC850009E685 /* SoundIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundIdentifier.swift; sourceTree = "<group>"; };
 		B57DBED42C4E78D600E8F182 /* MicSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicSelectView.swift; sourceTree = "<group>"; };
 		B57DBED62C4E78E400E8F182 /* BandSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandSettingView.swift; sourceTree = "<group>"; };
 		B57DBED82C4E78FF00E8F182 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		AF11F9E72C57CC070009E685 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF11F9E82C57CC850009E685 /* SoundIdentifier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF11F9E92C57CC850009E685 /* SoundIdentifier.swift in Sources */,
 				B57DBEDE2C522E0900E8F182 /* Song.swift in Sources */,
 				B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */,
 				B59724B62C4909CD0027990A /* ContentView.swift in Sources */,
