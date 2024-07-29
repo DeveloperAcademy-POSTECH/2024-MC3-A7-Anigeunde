@@ -48,8 +48,16 @@
 		AF11F9E62C57C6B00009E685 /* SoundProcessing */ = {
 			isa = PBXGroup;
 			children = (
+				AF11F9E72C57CC070009E685 /* Model */,
 			);
 			path = SoundProcessing;
+			sourceTree = "<group>";
+		};
+		AF11F9E72C57CC070009E685 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B57DBECB2C4E4BD700E8F182 /* Model */ = {
