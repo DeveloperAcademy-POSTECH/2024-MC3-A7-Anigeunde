@@ -8,7 +8,8 @@
 import Foundation
 
 struct Song: Identifiable {
-    let id: String = UUID().uuidString
+    let id = UUID()
+    var date: Date
     var title: String
     var instruments: [Instrument]
 }
