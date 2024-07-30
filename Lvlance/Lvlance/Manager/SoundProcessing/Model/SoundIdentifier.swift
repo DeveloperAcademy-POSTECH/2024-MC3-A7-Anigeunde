@@ -7,12 +7,13 @@
 
 
 struct SoundIdentifier: Hashable {
+    let instrument: InstrumentType
     
-    var labelName: String
-    var displayName: String
+    var labelName: String {
+        instrument.soundLabel
+    }
     
-    init(instrument: InstrumentType){
-        self.labelName = instrument.soundLabel
-        self.displayName = instrument.krName
+    var displayName: String {
+        instrument.krName
     }
 }
