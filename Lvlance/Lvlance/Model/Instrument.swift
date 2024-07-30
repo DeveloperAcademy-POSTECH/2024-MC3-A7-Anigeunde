@@ -19,11 +19,11 @@ enum InstrumentType: String, CaseIterable {
         case .vocal:
             "singing"
         case .keyboard:
-            "piano"
+            "electric_piano"
         case .bass:
             "bass_guitar"
         case .electric:
-            "guitar"
+            "electric_guitar"
         case .drum:
             "drum"
         }
