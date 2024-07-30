@@ -11,6 +11,7 @@
 		AF11F9EB2C57D1550009E685 /* DetectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9EA2C57D1550009E685 /* DetectionState.swift */; };
 		AF11F9ED2C57D5BD0009E685 /* ClassificationResultsSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9EC2C57D5BD0009E685 /* ClassificationResultsSubject.swift */; };
 		AF11F9EF2C57DE7F0009E685 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9EE2C57DE7F0009E685 /* AppConfiguration.swift */; };
+		AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9F02C57E2300009E685 /* SystemAudioClassifier.swift */; };
 		B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED42C4E78D600E8F182 /* MicSelectView.swift */; };
 		B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED62C4E78E400E8F182 /* BandSettingView.swift */; };
 		B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED82C4E78FF00E8F182 /* SideBarView.swift */; };
@@ -28,6 +29,7 @@
 		AF11F9EA2C57D1550009E685 /* DetectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionState.swift; sourceTree = "<group>"; };
 		AF11F9EC2C57D5BD0009E685 /* ClassificationResultsSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationResultsSubject.swift; sourceTree = "<group>"; };
 		AF11F9EE2C57DE7F0009E685 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		AF11F9F02C57E2300009E685 /* SystemAudioClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAudioClassifier.swift; sourceTree = "<group>"; };
 		B57DBED42C4E78D600E8F182 /* MicSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicSelectView.swift; sourceTree = "<group>"; };
 		B57DBED62C4E78E400E8F182 /* BandSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandSettingView.swift; sourceTree = "<group>"; };
 		B57DBED82C4E78FF00E8F182 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				AF11F9E82C57CC850009E685 /* SoundIdentifier.swift */,
 				AF11F9EA2C57D1550009E685 /* DetectionState.swift */,
+				AF11F9F02C57E2300009E685 /* SystemAudioClassifier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF11F9E92C57CC850009E685 /* SoundIdentifier.swift in Sources */,
+				AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */,
 				B57DBEDE2C522E0900E8F182 /* Song.swift in Sources */,
 				B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */,
 				B59724B62C4909CD0027990A /* ContentView.swift in Sources */,
