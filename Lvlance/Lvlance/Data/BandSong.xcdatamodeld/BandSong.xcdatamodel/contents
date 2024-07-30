@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="InstrumentData" representedClassName="InstrumentData" parentEntity="SongData" syncable="YES" codeGenerationType="class">
-        <attribute name="instrumentId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+    <entity name="Instrument" representedClassName="Instrument" parentEntity="Song" syncable="YES" codeGenerationType="class">
+        <attribute name="instrumentId" optional="YES" attributeType="String"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="type" optional="YES" attributeType="String"/>
-        <relationship name="song" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SongData" inverseName="instruments" inverseEntity="SongData"/>
+        <relationship name="song" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="instruments" inverseEntity="Song"/>
     </entity>
-    <entity name="SongData" representedClassName="SongData" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+    <entity name="Song" representedClassName="Song" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="instruments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="InstrumentData" inverseName="song" inverseEntity="InstrumentData"/>
+        <relationship name="instruments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Instrument" inverseName="song" inverseEntity="Instrument"/>
     </entity>
 </model>

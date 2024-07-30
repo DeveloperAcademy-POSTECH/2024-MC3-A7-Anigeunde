@@ -54,7 +54,7 @@ enum Order: Int {
 }
 
 struct Instrument: Identifiable {
-    let id = UUID()
+    let id: String = UUID().uuidString
     let type: InstrumentType
     var order: Order
 }
