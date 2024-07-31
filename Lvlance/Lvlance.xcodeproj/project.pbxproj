@@ -25,10 +25,12 @@
 		B57DBF082C58C70600E8F182 /* SongEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF042C58C70600E8F182 /* SongEntity+CoreDataProperties.swift */; };
 		B57DBF092C58C70600E8F182 /* InstrumentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF052C58C70600E8F182 /* InstrumentEntity+CoreDataClass.swift */; };
 		B57DBF0A2C58C70600E8F182 /* InstrumentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF062C58C70600E8F182 /* InstrumentEntity+CoreDataProperties.swift */; };
+		B57DBF0E2C5A240700E8F182 /* InstrumentAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF0D2C5A240700E8F182 /* InstrumentAddingView.swift */; };
 		B59724B42C4909CD0027990A /* LvlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B32C4909CD0027990A /* LvlanceApp.swift */; };
 		B59724B62C4909CD0027990A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B52C4909CD0027990A /* ContentView.swift */; };
 		B59724B82C4909CF0027990A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724B72C4909CF0027990A /* Assets.xcassets */; };
 		B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724BA2C4909CF0027990A /* Preview Assets.xcassets */; };
+		B5A9F61C2C5A79F600EFD035 /* InstrumentSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */; };
 		C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83802C5A292A001B7540 /* OnboardingView.swift */; };
 		C73C83832C5A297C001B7540 /* OnboardingNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83822C5A297C001B7540 /* OnboardingNextView.swift */; };
 		C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83842C5A299B001B7540 /* OnboardingStartView.swift */; };
@@ -53,12 +55,14 @@
 		B57DBF042C58C70600E8F182 /* SongEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SongEntity+CoreDataProperties.swift"; path = "Lvlance/Data/SongEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B57DBF052C58C70600E8F182 /* InstrumentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "InstrumentEntity+CoreDataClass.swift"; path = "Lvlance/Data/InstrumentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B57DBF062C58C70600E8F182 /* InstrumentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "InstrumentEntity+CoreDataProperties.swift"; path = "Lvlance/Data/InstrumentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B57DBF0D2C5A240700E8F182 /* InstrumentAddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentAddingView.swift; sourceTree = "<group>"; };
 		B59724B02C4909CD0027990A /* Lvlance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lvlance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59724B32C4909CD0027990A /* LvlanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LvlanceApp.swift; sourceTree = "<group>"; };
 		B59724B52C4909CD0027990A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B59724B72C4909CF0027990A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B59724BA2C4909CF0027990A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B59724BC2C4909CF0027990A /* Lvlance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lvlance.entitlements; sourceTree = "<group>"; };
+		B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentSelectButton.swift; sourceTree = "<group>"; };
 		C73C83802C5A292A001B7540 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C73C83822C5A297C001B7540 /* OnboardingNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNextView.swift; sourceTree = "<group>"; };
 		C73C83842C5A299B001B7540 /* OnboardingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		B57DBECF2C4E4C6C00E8F182 /* BandSetting */ = {
 			isa = PBXGroup;
 			children = (
+				B5A9F61D2C5A7A0100EFD035 /* InstrumentAdd */,
 				B57DBED62C4E78E400E8F182 /* BandSettingView.swift */,
 				B57DBED02C4E4C9600E8F182 /* SideBar */,
 			);
@@ -224,6 +229,15 @@
 				B59724BA2C4909CF0027990A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B5A9F61D2C5A7A0100EFD035 /* InstrumentAdd */ = {
+			isa = PBXGroup;
+			children = (
+				B57DBF0D2C5A240700E8F182 /* InstrumentAddingView.swift */,
+				B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */,
+			);
+			path = InstrumentAdd;
 			sourceTree = "<group>";
 		};
 		C73C837F2C5A28F1001B7540 /* Onboardiing */ = {
@@ -328,6 +342,8 @@
 				B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */,
 				AF11F9ED2C57D5BD0009E685 /* ClassificationResultsSubject.swift in Sources */,
 				B59724B42C4909CD0027990A /* LvlanceApp.swift in Sources */,
+				B57DBF0E2C5A240700E8F182 /* InstrumentAddingView.swift in Sources */,
+				B5A9F61C2C5A79F600EFD035 /* InstrumentSelectButton.swift in Sources */,
 				B57DBF022C54D5A500E8F182 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +479,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = 2WSJ3W54FF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -490,7 +506,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = 2WSJ3W54FF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
