@@ -16,6 +16,7 @@ struct playButtonStyle: ButtonStyle {
     }
 }
 
+//TODO: expanded image 색상 변경
 struct SideBarView: View {
     @State private var isSectionExpanded = true
     var body: some View {
@@ -33,13 +34,24 @@ struct SideBarView: View {
             Spacer().frame(height: 20)
             
             Divider()
+                .foregroundStyle(.sidebarDivider)
             
             List {
-                Section("곡 선택하기", isExpanded: $isSectionExpanded) {
-                    Label("새로운 노래", systemImage: "music.note")
-                        .tint(.purple)
+                Section(isExpanded: $isSectionExpanded) {
+                    Label {
+                        Text("새로운 노래")
+                    } icon: {
+                        Image(systemName: "music.note")
+                            .foregroundStyle(.systemPurple)
+                    }
+                    .listRowBackground(Color.sidebarFrameBackground)
+                } header: {
+                    Text("곡 선택하기")
+                        .foregroundStyle(.white)
+                        .padding(.bottom, 7)
                 }
             }
+            .scrollContentBackground(.hidden)
             .listStyle(SidebarListStyle())
             .frame(minHeight: 28, maxHeight: 449)
             .contextMenu(ContextMenu(menuItems: {
@@ -55,6 +67,8 @@ struct SideBarView: View {
                 Text("곡 추가하기")
                     .padding(.horizontal, 68)
             }
+            .buttonStyle(.borderedProminent)
+            
             
             Spacer()
                 .frame(height: 136)
@@ -64,10 +78,17 @@ struct SideBarView: View {
             } label: {
                 Text("악기 편집하기")
             }
+            .buttonStyle(.borderedProminent)
             .padding(.trailing, 8)
         }
         .padding(12)
         .frame(width: 236, height: 712)
+        .background(.sidebarBackground)
+        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(AngularGradient(gradient: Gradient(colors: [.gradientBlue, .gradientPurple]), center: .center), lineWidth: 1)
+        )
     }
 }
 
