@@ -23,6 +23,9 @@
 		B59724B62C4909CD0027990A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B52C4909CD0027990A /* ContentView.swift */; };
 		B59724B82C4909CF0027990A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724B72C4909CF0027990A /* Assets.xcassets */; };
 		B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724BA2C4909CF0027990A /* Preview Assets.xcassets */; };
+		C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83802C5A292A001B7540 /* OnboardingView.swift */; };
+		C73C83832C5A297C001B7540 /* OnboardingNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83822C5A297C001B7540 /* OnboardingNextView.swift */; };
+		C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83842C5A299B001B7540 /* OnboardingStartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		B59724B72C4909CF0027990A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B59724BA2C4909CF0027990A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B59724BC2C4909CF0027990A /* Lvlance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lvlance.entitlements; sourceTree = "<group>"; };
+		C73C83802C5A292A001B7540 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		C73C83822C5A297C001B7540 /* OnboardingNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNextView.swift; sourceTree = "<group>"; };
+		C73C83842C5A299B001B7540 /* OnboardingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 		B57DBECD2C4E4C0A00E8F182 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C73C837F2C5A28F1001B7540 /* Onboardiing */,
 				B57DBECE2C4E4C4700E8F182 /* MicSelect */,
 				B57DBECF2C4E4C6C00E8F182 /* BandSetting */,
 				B57DBED12C4E4CED00E8F182 /* Playing */,
@@ -193,6 +200,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C73C837F2C5A28F1001B7540 /* Onboardiing */ = {
+			isa = PBXGroup;
+			children = (
+				C73C83802C5A292A001B7540 /* OnboardingView.swift */,
+				C73C83822C5A297C001B7540 /* OnboardingNextView.swift */,
+				C73C83842C5A299B001B7540 /* OnboardingStartView.swift */,
+			);
+			path = Onboardiing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,9 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C73C83832C5A297C001B7540 /* OnboardingNextView.swift in Sources */,
 				AF11F9E92C57CC850009E685 /* SoundIdentifier.swift in Sources */,
+				C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */,
 				AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */,
 				B57DBEDE2C522E0900E8F182 /* Song.swift in Sources */,
+				C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */,
 				B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */,
 				B59724B62C4909CD0027990A /* ContentView.swift in Sources */,
 				B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */,
