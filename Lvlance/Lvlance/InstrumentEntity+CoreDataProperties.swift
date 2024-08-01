@@ -2,7 +2,7 @@
 //  InstrumentEntity+CoreDataProperties.swift
 //  Lvlance
 //
-//  Created by 지영 on 7/30/24.
+//  Created by 지영 on 8/1/24.
 //
 //
 
@@ -17,7 +17,6 @@ extension InstrumentEntity {
     }
 
     @NSManaged public var instrumentId: UUID?
-    @NSManaged public var order: Int16
     @NSManaged public var type: String?
     @NSManaged public var song: SongEntity?
 
