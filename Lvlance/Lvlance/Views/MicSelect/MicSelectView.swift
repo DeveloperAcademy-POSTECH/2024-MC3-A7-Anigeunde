@@ -19,7 +19,7 @@ struct MicSelectView: View {
             Text(selectedDevice == Device.invalid ? "밴드의 전체 소리를 입력할 기기를 선택해주세요. (권장 기기: iPhone)" : "선택하신 디바이스가 밴드의 연주 소리를 입력합니다.")
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             
-            Text(selectedDevice == Device.invalid ? "이 기기가 입력한 밴드의 소리는 악기별로 분류되어 앱 내에 반영됩니다." : "선택하신 디바이스가 밴드의 연주 소리를 입력합니다.")
+            Text(selectedDevice == Device.invalid ? "이 기기가 입력한 밴드의 소리는 악기별로 분류되어 앱 내에 반영됩니다." : "원하는 위치에 입력 기기를 놓아주세요.")
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 20)
                 .fontWeight(selectedDevice == Device.invalid ? .light : .bold )
