@@ -30,11 +30,17 @@
 		B59724B62C4909CD0027990A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B52C4909CD0027990A /* ContentView.swift */; };
 		B59724B82C4909CF0027990A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724B72C4909CF0027990A /* Assets.xcassets */; };
 		B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724BA2C4909CF0027990A /* Preview Assets.xcassets */; };
+		B5A9F6362C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6322C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift */; };
+		B5A9F6372C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6332C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift */; };
+		B5A9F6382C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6342C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift */; };
+		B5A9F6392C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */; };
 		B5A9F61C2C5A79F600EFD035 /* InstrumentSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */; };
 		B5A9F61F2C5B689500EFD035 /* InstrumentReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F61E2C5B689500EFD035 /* InstrumentReady.swift */; };
 		C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83802C5A292A001B7540 /* OnboardingView.swift */; };
 		C73C83832C5A297C001B7540 /* OnboardingNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83822C5A297C001B7540 /* OnboardingNextView.swift */; };
 		C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83842C5A299B001B7540 /* OnboardingStartView.swift */; };
+		C7D8AC992C5B890E001AB123 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8AC952C5B890E001AB123 /* Device.swift */; };
+		C7D8AC9A2C5B890E001AB123 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8AC972C5B890E001AB123 /* AudioManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,9 +71,15 @@
 		B59724BC2C4909CF0027990A /* Lvlance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lvlance.entitlements; sourceTree = "<group>"; };
 		B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentSelectButton.swift; sourceTree = "<group>"; };
 		B5A9F61E2C5B689500EFD035 /* InstrumentReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentReady.swift; sourceTree = "<group>"; };
+		B5A9F6322C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B5A9F6332C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B5A9F6342C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C73C83802C5A292A001B7540 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C73C83822C5A297C001B7540 /* OnboardingNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNextView.swift; sourceTree = "<group>"; };
 		C73C83842C5A299B001B7540 /* OnboardingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
+		C7D8AC952C5B890E001AB123 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C7D8AC972C5B890E001AB123 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +172,7 @@
 		B57DBED22C4E4D1100E8F182 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				C7D8AC982C5B890E001AB123 /* AudioManaging */,
 				AF11F9E62C57C6B00009E685 /* SoundProcessing */,
 				B57DBF012C54D5A500E8F182 /* CoreDataManager.swift */,
 			);
@@ -192,10 +205,10 @@
 		B59724A72C4909CD0027990A = {
 			isa = PBXGroup;
 			children = (
-				B57DBF032C58C70600E8F182 /* SongEntity+CoreDataClass.swift */,
-				B57DBF042C58C70600E8F182 /* SongEntity+CoreDataProperties.swift */,
-				B57DBF052C58C70600E8F182 /* InstrumentEntity+CoreDataClass.swift */,
-				B57DBF062C58C70600E8F182 /* InstrumentEntity+CoreDataProperties.swift */,
+				B5A9F6322C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift */,
+				B5A9F6332C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift */,
+				B5A9F6342C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift */,
+				B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */,
 				B59724B22C4909CD0027990A /* Lvlance */,
 				B59724B12C4909CD0027990A /* Products */,
 			);
@@ -251,6 +264,23 @@
 				C73C83842C5A299B001B7540 /* OnboardingStartView.swift */,
 			);
 			path = Onboardiing;
+			sourceTree = "<group>";
+		};
+		C7D8AC962C5B890E001AB123 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7D8AC952C5B890E001AB123 /* Device.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7D8AC982C5B890E001AB123 /* AudioManaging */ = {
+			isa = PBXGroup;
+			children = (
+				C7D8AC962C5B890E001AB123 /* Model */,
+				C7D8AC972C5B890E001AB123 /* AudioManager.swift */,
+			);
+			path = AudioManaging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +355,13 @@
 			files = (
 				C73C83832C5A297C001B7540 /* OnboardingNextView.swift in Sources */,
 				AF11F9E92C57CC850009E685 /* SoundIdentifier.swift in Sources */,
+				C7D8AC9A2C5B890E001AB123 /* AudioManager.swift in Sources */,
 				C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */,
+				B5A9F6362C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift in Sources */,
+				B5A9F6372C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift in Sources */,
+				B5A9F6382C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift in Sources */,
+				B5A9F6392C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift in Sources */,
+				C7D8AC992C5B890E001AB123 /* Device.swift in Sources */,
 				AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */,
 				B57DBEDE2C522E0900E8F182 /* Song.swift in Sources */,
 				C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */,
