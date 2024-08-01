@@ -156,9 +156,9 @@
 		B57DBED22C4E4D1100E8F182 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				B57DBF012C54D5A500E8F182 /* CoreDataManager.swift */,
 				C7D8AC982C5B890E001AB123 /* AudioManaging */,
 				AF11F9E62C57C6B00009E685 /* SoundProcessing */,
+				B57DBF012C54D5A500E8F182 /* CoreDataManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
