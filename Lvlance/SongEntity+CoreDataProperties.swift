@@ -16,9 +16,9 @@ extension SongEntity {
         return NSFetchRequest<SongEntity>(entityName: "SongEntity")
     }
 
-    @NSManaged public var date: Date?
-    @NSManaged public var id: UUID?
-    @NSManaged public var title: String?
+    @NSManaged public var date: Date
+    @NSManaged public var id: UUID
+    @NSManaged public var title: String
     @NSManaged public var instruments: NSSet?
 
 }

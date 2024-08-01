@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="InstrumentEntity" representedClassName="InstrumentEntity" parentEntity="SongEntity" syncable="YES">
-        <attribute name="instrumentId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="type" optional="YES" attributeType="String"/>
-        <relationship name="song" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SongEntity" inverseName="instruments" inverseEntity="SongEntity"/>
+        <attribute name="instrumentId" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="type" attributeType="String"/>
     </entity>
     <entity name="SongEntity" representedClassName="SongEntity" syncable="YES">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="instruments" optional="YES" toMany="YES" minCount="1" maxCount="5" deletionRule="Cascade" destinationEntity="InstrumentEntity" inverseName="song" inverseEntity="InstrumentEntity"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="instruments" optional="YES" toMany="YES" minCount="1" maxCount="5" deletionRule="Cascade" destinationEntity="InstrumentEntity"/>
     </entity>
 </model>
