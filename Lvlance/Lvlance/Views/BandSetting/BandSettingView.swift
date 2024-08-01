@@ -9,7 +9,16 @@ import SwiftUI
 
 struct BandSettingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            SideBarView()
+            
+            ForEach(0...4, id: \.self) { _ in
+                InstrumentReady()
+            }
+            .padding()
+        }
+        .frame(width: 1510, height: 834)
+
     }
 }
 

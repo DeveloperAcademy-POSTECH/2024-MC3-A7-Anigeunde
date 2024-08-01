@@ -16,7 +16,7 @@ struct InstrumentSelectButton: View {
                     .frame(width: 83, height: 83)
                     .foregroundStyle(.sidebarBackground)
                     
-                Image("popup_bass_guitar")
+                Image("select_bass_guitar")
             }
                 
             HStack {
