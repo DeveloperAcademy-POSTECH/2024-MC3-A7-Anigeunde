@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF11F9E92C57CC850009E685 /* SoundIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9E82C57CC850009E685 /* SoundIdentifier.swift */; };
+		AF11F9EB2C57D1550009E685 /* DetectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9EA2C57D1550009E685 /* DetectionState.swift */; };
+		AF11F9ED2C57D5BD0009E685 /* ClassificationResultsSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9EC2C57D5BD0009E685 /* ClassificationResultsSubject.swift */; };
+		AF11F9EF2C57DE7F0009E685 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9EE2C57DE7F0009E685 /* AppConfiguration.swift */; };
+		AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9F02C57E2300009E685 /* SystemAudioClassifier.swift */; };
+		AF11F9F32C587C4D0009E685 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9F22C587C4D0009E685 /* AppState.swift */; };
 		B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED42C4E78D600E8F182 /* MicSelectView.swift */; };
 		B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED62C4E78E400E8F182 /* BandSettingView.swift */; };
 		B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED82C4E78FF00E8F182 /* SideBarView.swift */; };
@@ -23,9 +29,20 @@
 		B59724B62C4909CD0027990A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B52C4909CD0027990A /* ContentView.swift */; };
 		B59724B82C4909CF0027990A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724B72C4909CF0027990A /* Assets.xcassets */; };
 		B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724BA2C4909CF0027990A /* Preview Assets.xcassets */; };
+		C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83802C5A292A001B7540 /* OnboardingView.swift */; };
+		C73C83832C5A297C001B7540 /* OnboardingNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83822C5A297C001B7540 /* OnboardingNextView.swift */; };
+		C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83842C5A299B001B7540 /* OnboardingStartView.swift */; };
+		C7D8AC992C5B890E001AB123 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8AC952C5B890E001AB123 /* Device.swift */; };
+		C7D8AC9A2C5B890E001AB123 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8AC972C5B890E001AB123 /* AudioManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF11F9E82C57CC850009E685 /* SoundIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundIdentifier.swift; sourceTree = "<group>"; };
+		AF11F9EA2C57D1550009E685 /* DetectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionState.swift; sourceTree = "<group>"; };
+		AF11F9EC2C57D5BD0009E685 /* ClassificationResultsSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationResultsSubject.swift; sourceTree = "<group>"; };
+		AF11F9EE2C57DE7F0009E685 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		AF11F9F02C57E2300009E685 /* SystemAudioClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAudioClassifier.swift; sourceTree = "<group>"; };
+		AF11F9F22C587C4D0009E685 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B57DBED42C4E78D600E8F182 /* MicSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicSelectView.swift; sourceTree = "<group>"; };
 		B57DBED62C4E78E400E8F182 /* BandSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandSettingView.swift; sourceTree = "<group>"; };
 		B57DBED82C4E78FF00E8F182 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
@@ -44,6 +61,11 @@
 		B59724B72C4909CF0027990A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B59724BA2C4909CF0027990A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B59724BC2C4909CF0027990A /* Lvlance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lvlance.entitlements; sourceTree = "<group>"; };
+		C73C83802C5A292A001B7540 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		C73C83822C5A297C001B7540 /* OnboardingNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNextView.swift; sourceTree = "<group>"; };
+		C73C83842C5A299B001B7540 /* OnboardingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
+		C7D8AC952C5B890E001AB123 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C7D8AC972C5B890E001AB123 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +79,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF11F9E62C57C6B00009E685 /* SoundProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				AF11F9F02C57E2300009E685 /* SystemAudioClassifier.swift */,
+				AF11F9EC2C57D5BD0009E685 /* ClassificationResultsSubject.swift */,
+				AF11F9EE2C57DE7F0009E685 /* AppConfiguration.swift */,
+				AF11F9F22C587C4D0009E685 /* AppState.swift */,
+				AF11F9E72C57CC070009E685 /* Model */,
+			);
+			path = SoundProcessing;
+			sourceTree = "<group>";
+		};
+		AF11F9E72C57CC070009E685 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF11F9E82C57CC850009E685 /* SoundIdentifier.swift */,
+				AF11F9EA2C57D1550009E685 /* DetectionState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B57DBECB2C4E4BD700E8F182 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +112,7 @@
 		B57DBECD2C4E4C0A00E8F182 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C73C837F2C5A28F1001B7540 /* Onboardiing */,
 				B57DBECE2C4E4C4700E8F182 /* MicSelect */,
 				B57DBECF2C4E4C6C00E8F182 /* BandSetting */,
 				B57DBED12C4E4CED00E8F182 /* Playing */,
@@ -112,6 +156,8 @@
 		B57DBED22C4E4D1100E8F182 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				C7D8AC982C5B890E001AB123 /* AudioManaging */,
+				AF11F9E62C57C6B00009E685 /* SoundProcessing */,
 				B57DBF012C54D5A500E8F182 /* CoreDataManager.swift */,
 			);
 			path = Manager;
@@ -185,6 +231,33 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C73C837F2C5A28F1001B7540 /* Onboardiing */ = {
+			isa = PBXGroup;
+			children = (
+				C73C83802C5A292A001B7540 /* OnboardingView.swift */,
+				C73C83822C5A297C001B7540 /* OnboardingNextView.swift */,
+				C73C83842C5A299B001B7540 /* OnboardingStartView.swift */,
+			);
+			path = Onboardiing;
+			sourceTree = "<group>";
+		};
+		C7D8AC962C5B890E001AB123 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7D8AC952C5B890E001AB123 /* Device.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7D8AC982C5B890E001AB123 /* AudioManaging */ = {
+			isa = PBXGroup;
+			children = (
+				C7D8AC962C5B890E001AB123 /* Model */,
+				C7D8AC972C5B890E001AB123 /* AudioManager.swift */,
+			);
+			path = AudioManaging;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,7 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C73C83832C5A297C001B7540 /* OnboardingNextView.swift in Sources */,
+				AF11F9E92C57CC850009E685 /* SoundIdentifier.swift in Sources */,
+				C7D8AC9A2C5B890E001AB123 /* AudioManager.swift in Sources */,
+				C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */,
+				C7D8AC992C5B890E001AB123 /* Device.swift in Sources */,
+				AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */,
 				B57DBEDE2C522E0900E8F182 /* Song.swift in Sources */,
+				C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */,
 				B57DBEEF2C54A50E00E8F182 /* BandSong.xcdatamodeld in Sources */,
 				B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */,
 				B59724B62C4909CD0027990A /* ContentView.swift in Sources */,
@@ -265,8 +345,12 @@
 				B57DBF092C58C70600E8F182 /* InstrumentEntity+CoreDataClass.swift in Sources */,
 				B57DBF0A2C58C70600E8F182 /* InstrumentEntity+CoreDataProperties.swift in Sources */,
 				B57DBEE22C52327500E8F182 /* Instrument.swift in Sources */,
+				AF11F9EF2C57DE7F0009E685 /* AppConfiguration.swift in Sources */,
 				B57DBEDB2C4E791000E8F182 /* PlayingView.swift in Sources */,
+				AF11F9F32C587C4D0009E685 /* AppState.swift in Sources */,
+				AF11F9EB2C57D1550009E685 /* DetectionState.swift in Sources */,
 				B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */,
+				AF11F9ED2C57D5BD0009E685 /* ClassificationResultsSubject.swift in Sources */,
 				B59724B42C4909CD0027990A /* LvlanceApp.swift in Sources */,
 				B57DBF022C54D5A500E8F182 /* CoreDataManager.swift in Sources */,
 			);
@@ -403,7 +487,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
-				DEVELOPMENT_TEAM = 2WSJ3W54FF;
+				DEVELOPMENT_TEAM = PAPTDHH68K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -430,7 +514,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
-				DEVELOPMENT_TEAM = 2WSJ3W54FF;
+				DEVELOPMENT_TEAM = PAPTDHH68K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

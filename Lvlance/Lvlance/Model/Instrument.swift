@@ -14,6 +14,21 @@ enum InstrumentType: String, CaseIterable {
     case electric
     case drum
     
+    var soundLabel: String {
+        switch self {
+        case .vocal:
+            "singing"
+        case .keyboard:
+            "electric_piano"
+        case .bass:
+            "bass_guitar"
+        case .electric:
+            "electric_guitar"
+        case .drum:
+            "drum"
+        }
+    }
+    
     var krName: String {
         switch self {
         case .vocal:
@@ -29,18 +44,33 @@ enum InstrumentType: String, CaseIterable {
         }
     }
     
-    var image: String {
+    var maskImage: String {
         switch self {
         case .vocal:
-            "vocal"
+            "mask_singing"
         case .keyboard:
-            "vocal"
+            "mask_electric_piano"
         case .bass:
-            "vocal"
+            "mask_bass_guitar"
         case .electric:
-            "vocal"
+            "mask_electric_guitar"
         case .drum:
-            "vocal"
+            "mask_drum"
+        }
+    }
+    
+    var outlineImage: String {
+        switch self {
+        case .vocal:
+            "outline_singing"
+        case .keyboard:
+            "outline_electric_piano"
+        case .bass:
+            "outline_bass_guitar"
+        case .electric:
+            "outline_electric_guitar"
+        case .drum:
+            "outline_drum"
         }
     }
 }
