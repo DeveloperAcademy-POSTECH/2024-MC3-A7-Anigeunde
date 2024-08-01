@@ -48,7 +48,6 @@ class CoreDataManager: ObservableObject {
         for instrument in instruments {
             var newInstrument = InstrumentEntity(context: context)
             newInstrument.type = instrument.type.rawValue
-            newInstrument.order = Int16(instrument.order.rawValue)
             newSong.addToInstruments(newInstrument)
         }
         save()
@@ -79,7 +78,6 @@ class CoreDataManager: ObservableObject {
         for instrument in instruments {
             var newInstrument = InstrumentEntity(context: context)
             newInstrument.type = instrument.type.rawValue
-            newInstrument.order = Int16(instrument.order.rawValue)
             song.addToInstruments(newInstrument)
         }
         

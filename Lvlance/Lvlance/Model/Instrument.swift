@@ -44,6 +44,21 @@ enum InstrumentType: String, CaseIterable {
         }
     }
     
+    var order: Int {
+        switch self {
+        case .vocal:
+            0
+        case .keyboard:
+            1
+        case .bass:
+            2
+        case .electric:
+            3
+        case .drum:
+            4
+        }
+    }
+    
     var maskImage: String {
         switch self {
         case .vocal:
@@ -75,16 +90,7 @@ enum InstrumentType: String, CaseIterable {
     }
 }
 
-enum Order: Int {
-    case zero
-    case one
-    case two
-    case three
-    case four
-}
-
 struct Instrument: Identifiable {
-    let id = UUID()
-    var type: InstrumentType
-    var order: Order
+    let id: String = UUID()
+    let type: InstrumentType
 }
