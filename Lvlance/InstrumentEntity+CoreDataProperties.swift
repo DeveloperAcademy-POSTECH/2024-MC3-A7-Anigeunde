@@ -16,7 +16,7 @@ extension InstrumentEntity {
         return NSFetchRequest<InstrumentEntity>(entityName: "InstrumentEntity")
     }
 
-    @NSManaged public var instrumentId: UUID
-    @NSManaged public var type: String
+    @NSManaged public var instrumentId: UUID?
+    @NSManaged public var type: String?
 
 }
