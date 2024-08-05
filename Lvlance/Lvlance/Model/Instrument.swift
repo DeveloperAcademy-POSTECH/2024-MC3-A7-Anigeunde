@@ -91,6 +91,6 @@ enum InstrumentType: String, CaseIterable {
 }
 
 struct Instrument: Identifiable {
-    let id: String = UUID()
+    let id: String = UUID().uuidString
     let type: InstrumentType
 }
