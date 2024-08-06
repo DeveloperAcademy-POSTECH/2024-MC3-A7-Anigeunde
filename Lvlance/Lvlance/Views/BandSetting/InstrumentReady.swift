@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct InstrumentReady: View {    
+    let instrument: Instrument
+    
     var body: some View {
         VStack {
-            Text("Vocal")
+            Text(instrument.type.rawValue)
+            
             Spacer().frame(height: 92)
-            Image("outline_electric_guitar")
+            
+            Image(instrument.type.outlineImage)
                 .opacity(0.4)
         }
     }

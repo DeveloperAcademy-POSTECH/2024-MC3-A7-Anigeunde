@@ -26,21 +26,19 @@
 		B57DBEE22C52327500E8F182 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBEE12C52327500E8F182 /* Instrument.swift */; };
 		B57DBEEF2C54A50E00E8F182 /* BandSong.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B57DBEED2C54A50E00E8F182 /* BandSong.xcdatamodeld */; };
 		B57DBF022C54D5A500E8F182 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF012C54D5A500E8F182 /* CoreDataManager.swift */; };
-		B57DBF072C58C70600E8F182 /* SongEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF032C58C70600E8F182 /* SongEntity+CoreDataClass.swift */; };
-		B57DBF082C58C70600E8F182 /* SongEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF042C58C70600E8F182 /* SongEntity+CoreDataProperties.swift */; };
-		B57DBF092C58C70600E8F182 /* InstrumentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF052C58C70600E8F182 /* InstrumentEntity+CoreDataClass.swift */; };
-		B57DBF0A2C58C70600E8F182 /* InstrumentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF062C58C70600E8F182 /* InstrumentEntity+CoreDataProperties.swift */; };
 		B57DBF0E2C5A240700E8F182 /* InstrumentAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF0D2C5A240700E8F182 /* InstrumentAddingView.swift */; };
 		B59724B42C4909CD0027990A /* LvlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B32C4909CD0027990A /* LvlanceApp.swift */; };
 		B59724B62C4909CD0027990A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B52C4909CD0027990A /* ContentView.swift */; };
 		B59724B82C4909CF0027990A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724B72C4909CF0027990A /* Assets.xcassets */; };
 		B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724BA2C4909CF0027990A /* Preview Assets.xcassets */; };
+		B5A9F61C2C5A79F600EFD035 /* InstrumentSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */; };
+		B5A9F61F2C5B689500EFD035 /* InstrumentReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F61E2C5B689500EFD035 /* InstrumentReady.swift */; };
 		B5A9F6362C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6322C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift */; };
 		B5A9F6372C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6332C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift */; };
 		B5A9F6382C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6342C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift */; };
 		B5A9F6392C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */; };
-		B5A9F61C2C5A79F600EFD035 /* InstrumentSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */; };
-		B5A9F61F2C5B689500EFD035 /* InstrumentReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F61E2C5B689500EFD035 /* InstrumentReady.swift */; };
+		B5A9F63E2C5BC11400EFD035 /* playButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F63D2C5BC11400EFD035 /* playButtonStyle.swift */; };
+		B5C9B47D2C61014500FE4F81 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9B47C2C61014500FE4F81 /* SongViewModel.swift */; };
 		C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83802C5A292A001B7540 /* OnboardingView.swift */; };
 		C73C83832C5A297C001B7540 /* OnboardingNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83822C5A297C001B7540 /* OnboardingNextView.swift */; };
 		C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83842C5A299B001B7540 /* OnboardingStartView.swift */; };
@@ -85,6 +83,13 @@
 		B5A9F6332C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B5A9F6342C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B5A9F63D2C5BC11400EFD035 /* playButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playButtonStyle.swift; sourceTree = "<group>"; };
+		B5C9B46C2C5C754900FE4F81 /* TempView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
+		B5C9B46D2C5C754900FE4F81 /* SettingPopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPopoverView.swift; sourceTree = "<group>"; };
+		B5C9B46E2C5C754A00FE4F81 /* InstrumentBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentBar.swift; sourceTree = "<group>"; };
+		B5C9B46F2C5C754A00FE4F81 /* SetupMonitoredSoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMonitoredSoundView.swift; sourceTree = "<group>"; };
+		B5C9B4702C5C754A00FE4F81 /* DetectSoundsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectSoundsView.swift; sourceTree = "<group>"; };
+		B5C9B47C2C61014500FE4F81 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		C73C83802C5A292A001B7540 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C73C83822C5A297C001B7540 /* OnboardingNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNextView.swift; sourceTree = "<group>"; };
 		C73C83842C5A299B001B7540 /* OnboardingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
@@ -159,6 +164,7 @@
 				B5A9F61E2C5B689500EFD035 /* InstrumentReady.swift */,
 				B5A9F61D2C5A7A0100EFD035 /* InstrumentAdd */,
 				B57DBED02C4E4C9600E8F182 /* SideBar */,
+				B5C9B47C2C61014500FE4F81 /* SongViewModel.swift */,
 			);
 			path = BandSetting;
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				B57DBED82C4E78FF00E8F182 /* SideBarView.swift */,
+				B5A9F63D2C5BC11400EFD035 /* playButtonStyle.swift */,
 			);
 			path = SideBar;
 			sourceTree = "<group>";
@@ -225,6 +232,7 @@
 				B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */,
 				B59724B22C4909CD0027990A /* Lvlance */,
 				B59724B12C4909CD0027990A /* Products */,
+				B5A9F63A2C5BB84B00EFD035 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,6 +276,22 @@
 				B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */,
 			);
 			path = InstrumentAdd;
+			sourceTree = "<group>";
+		};
+		B5A9F63A2C5BB84B00EFD035 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				B57DBF032C58C70600E8F182 /* SongEntity+CoreDataClass.swift */,
+				B57DBF042C58C70600E8F182 /* SongEntity+CoreDataProperties.swift */,
+				B57DBF052C58C70600E8F182 /* InstrumentEntity+CoreDataClass.swift */,
+				B57DBF062C58C70600E8F182 /* InstrumentEntity+CoreDataProperties.swift */,
+				B5C9B46F2C5C754A00FE4F81 /* SetupMonitoredSoundView.swift */,
+				B5C9B4702C5C754A00FE4F81 /* DetectSoundsView.swift */,
+				B5C9B46D2C5C754900FE4F81 /* SettingPopoverView.swift */,
+				B5C9B46C2C5C754900FE4F81 /* TempView.swift */,
+				B5C9B46E2C5C754A00FE4F81 /* InstrumentBar.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		C73C837F2C5A28F1001B7540 /* Onboardiing */ = {
@@ -382,6 +406,7 @@
 				AFB83FAB2C5C76DA00E48896 /* SettingPopoverView.swift in Sources */,
 				AFB83FAC2C5C76DA00E48896 /* TempView.swift in Sources */,
 				AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */,
+				B5C9B47D2C61014500FE4F81 /* SongViewModel.swift in Sources */,
 				B57DBEDE2C522E0900E8F182 /* Song.swift in Sources */,
 				C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */,
 				B57DBEEF2C54A50E00E8F182 /* BandSong.xcdatamodeld in Sources */,
@@ -390,10 +415,6 @@
 				B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */,
 				AFB83FA82C5C76DA00E48896 /* DetectSoundsView.swift in Sources */,
 				B5A9F61F2C5B689500EFD035 /* InstrumentReady.swift in Sources */,
-				B57DBF072C58C70600E8F182 /* SongEntity+CoreDataClass.swift in Sources */,
-				B57DBF082C58C70600E8F182 /* SongEntity+CoreDataProperties.swift in Sources */,
-				B57DBF092C58C70600E8F182 /* InstrumentEntity+CoreDataClass.swift in Sources */,
-				B57DBF0A2C58C70600E8F182 /* InstrumentEntity+CoreDataProperties.swift in Sources */,
 				B57DBEE22C52327500E8F182 /* Instrument.swift in Sources */,
 				AF11F9EF2C57DE7F0009E685 /* AppConfiguration.swift in Sources */,
 				AF11F9F32C587C4D0009E685 /* AppState.swift in Sources */,
@@ -404,6 +425,7 @@
 				B57DBF0E2C5A240700E8F182 /* InstrumentAddingView.swift in Sources */,
 				B5A9F61C2C5A79F600EFD035 /* InstrumentSelectButton.swift in Sources */,
 				B57DBF022C54D5A500E8F182 /* CoreDataManager.swift in Sources */,
+				B5A9F63E2C5BC11400EFD035 /* playButtonStyle.swift in Sources */,
 				AFB83FA92C5C76DA00E48896 /* SetupMonitoredSoundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,7 +566,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -572,7 +593,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

@@ -8,20 +8,57 @@
 import SwiftUI
 
 struct BandSettingView: View {
+    @EnvironmentObject var coreDataManager: CoreDataManager
+    @StateObject var appState = AppState()
+    @State var appConfig = AppConfiguration()
+    @State var path = NavigationPath()
+    @State var songs: [Song] = []
+    @State var selectedSong: Song?
+    @State private var isSheetPresented = false
+
+    
     var body: some View {
-        HStack {
-            SideBarView()
-            
-            ForEach(0...4, id: \.self) { _ in
-                InstrumentReady()
+        NavigationStack(path: $path) {
+            HStack {
+                SideBarView(songs: $songs, selectedSong: $selectedSong, isSheetPresented: $isSheetPresented, appState: appState, appConfig: $appConfig, path: $path)
+                    .padding(.leading, 20)
+                
+                Spacer()
+                if let selectedSong = selectedSong {
+                    ForEach(selectedSong.instruments) { instrument in
+                        InstrumentReady(instrument: instrument)
+                    }
+                } else {
+                    Text("곡을 추가해주세요.")
+                        .font(.system(size: 23).bold())
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 500)
+                }
+                
+                Spacer()
+                
             }
-            .padding()
+
+            
         }
         .frame(width: 1510, height: 834)
 
+        .navigationDestination(for: String.self) { string in
+            if string == "playView" {
+                DetectSoundsView(state: appState, config: $appConfig, path: $path)
+            }
+        }
+        
+        .onAppear {
+            songs = coreDataManager.getAllSongs()
+            getSelectedSong()
+            print(selectedSong)
+        }
     }
-}
-
-#Preview {
-    BandSettingView()
+    
+    func getSelectedSong() {
+        if !songs.isEmpty {
+            selectedSong = songs.first
+        }
+    }
 }

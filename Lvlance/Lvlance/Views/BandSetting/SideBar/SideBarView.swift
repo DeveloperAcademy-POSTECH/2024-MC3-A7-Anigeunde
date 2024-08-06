@@ -7,24 +7,35 @@
 
 import SwiftUI
 
-struct playButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(.system(size: 24))
-            .foregroundStyle(.white)
-            .background(.clear)
-    }
-}
-
-//TODO: expanded image 색상 변경
 struct SideBarView: View {
+    @EnvironmentObject var coreDataManager: CoreDataManager
+//    @Environment(\.openWindow) private var openWindow
     @State private var isSectionExpanded = true
+    
+
+    
+    @Binding var songs: [Song]
+    @Binding var selectedSong: Song?
+    @Binding var isSheetPresented: Bool
+    
+    @ObservedObject var appState: AppState
+    @Binding var appConfig: AppConfiguration
+    @Binding var path: NavigationPath
+    
+    
     var body: some View {
         VStack(alignment: .trailing ,spacing: 0) {
             Spacer().frame(height: 46)
             
             Button {
-                print("재생버튼")
+                /// 선택된 노래의 악기 정보를 재생할 뷰에 넘겨주기
+                guard let selectedSong = selectedSong else { return }
+                appConfig.monitoredSounds = Set(selectedSong.instruments.map {
+                    SoundIdentifier(instrument: $0.type)
+                })
+                /// 재생시키기
+                appState.restartDetection(config: appConfig)
+                path.append("playView")
             } label: {
                 Image(systemName: "play.fill")
             }
@@ -38,13 +49,18 @@ struct SideBarView: View {
             
             List {
                 Section(isExpanded: $isSectionExpanded) {
-                    Label {
-                        Text("새로운 노래")
-                    } icon: {
-                        Image(systemName: "music.note")
-                            .foregroundStyle(.systemPurple)
+                    ForEach(songs) { song in
+                        Label {
+                            Text(song.title)
+                        } icon: {
+                            Image(systemName: "music.note")
+                                .foregroundStyle(.systemPurple)
+                        }
+                        .listRowBackground(Color.sidebarFrameBackground)
+                        .onTapGesture {
+                            selectedSong = song
+                        }
                     }
-                    .listRowBackground(Color.sidebarFrameBackground)
                 } header: {
                     Text("곡 선택하기")
                         .foregroundStyle(.white)
@@ -55,6 +71,7 @@ struct SideBarView: View {
             .listStyle(SidebarListStyle())
             .frame(minHeight: 28, maxHeight: 449)
             .contextMenu(ContextMenu(menuItems: {
+                //TODO: update, delete
                 Text("곡명 변경하기")
                 Text("곡 삭제하기")
             }))
@@ -62,7 +79,9 @@ struct SideBarView: View {
             Spacer().frame(height: 30)
             
             Button {
-                print("곡 추가하기")
+                ///새 노래 만들기
+                
+                
             } label: {
                 Text("곡 추가하기")
                     .padding(.horizontal, 68)
@@ -70,16 +89,19 @@ struct SideBarView: View {
             .buttonStyle(.borderedProminent)
             
             
+            
             Spacer()
                 .frame(height: 136)
             
+            //TODO: 버튼 바꾸기
             Button {
-                print("악기 편집하기")
+                isSheetPresented = true
             } label: {
                 Text("악기 편집하기")
             }
             .buttonStyle(.borderedProminent)
             .padding(.trailing, 8)
+
         }
         .padding(12)
         .frame(width: 236, height: 712)
@@ -89,9 +111,13 @@ struct SideBarView: View {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(AngularGradient(gradient: Gradient(colors: [.gradientBlue, .gradientPurple]), center: .center), lineWidth: 1)
         )
+        .onAppear {
+//            songs = coreDataManager.getAllSongs()
+        }
     }
 }
 
-#Preview {
-    SideBarView()
-}
+//#Preview {
+//    SideBarView()
+//        .environment(\.managedObjectContext, CoreDataManager.persistentContainer.viewContext)
+//}

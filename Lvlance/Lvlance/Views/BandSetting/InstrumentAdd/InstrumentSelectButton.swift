@@ -8,26 +8,28 @@
 import SwiftUI
 
 struct InstrumentSelectButton: View {
-    @State private var isSelected = true
+    @State private var isSelected = false
+    @Binding var selectedInstruments: Set<InstrumentType>
+    let instrumentType: InstrumentType
+
     var body: some View {
         VStack {
-            ZStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .frame(width: 83, height: 83)
-                    .foregroundStyle(.sidebarBackground)
-                    
-                Image("select_bass_guitar")
-            }
-                
+            Image("select_\(instrumentType.rawValue)")
+            
             HStack {
-                Toggle("보컬", isOn: $isSelected)
+                Toggle("\(instrumentType.krName)", isOn: $isSelected)
                     .toggleStyle(.checkbox)
+                    .onChange(of: isSelected) {
+                        if isSelected {
+                            selectedInstruments.insert(instrumentType)
+                        } else {
+                            selectedInstruments.remove(instrumentType)
+                        }
+                    }
             }
             
         }
     }
 }
 
-#Preview {
-    InstrumentSelectButton()
-}
+
