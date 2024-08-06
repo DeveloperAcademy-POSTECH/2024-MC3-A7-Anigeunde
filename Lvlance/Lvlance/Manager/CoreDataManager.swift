@@ -39,7 +39,7 @@ class CoreDataManager: ObservableObject {
     }
     
     
-    func createSong(title: String, instruments: [Instrument]) {
+    func createSongEntity(instruments: [Instrument]) {
         let newSong = SongEntity(context: context)
         newSong.id = UUID()
         newSong.date = Date()
@@ -65,8 +65,32 @@ class CoreDataManager: ObservableObject {
         return []
     }
     
+    //TODO: 비동기처리,,?
+    func getAllSongs() -> [Song] {
+        var songs: [Song] = []
+        let fetchResults = fetchAllSongs()
+        for result in fetchResults {
+            var title = result.title ?? "새 노래"
+            var instruments: [Instrument] = []
+            
+            if let instrumentEntities = result.instruments as? Set<InstrumentEntity> {
+                for instrumentEntity in instrumentEntities {
+                    if let entityType = instrumentEntity.type,
+                       let type = InstrumentType(rawValue: entityType) {
+                        let instrument = Instrument(type: type)
+                        instruments.append(instrument)
+                    }
+                }
+            }
+            
+            let song = Song(title: title, instruments: instruments)
+            songs.append(song)
+            
+        }
+        return songs
+    }
     
-    func updateSong(song: SongEntity, title: String, instruments: [Instrument]) {
+    func updateSongEntity(song: SongEntity, title: String, instruments: [Instrument]) {
         song.title = title
         
         if let instruments = song.instruments as? Set<SongEntity> {
@@ -83,9 +107,9 @@ class CoreDataManager: ObservableObject {
         
         save()
     }
-//    
-//    func deleteSong(song: SongEntity) {
-//        context.delete(song)
-//        save()
-//    }
+    //
+    //    func deleteSong(song: SongEntity) {
+    //        context.delete(song)
+    //        save()
+    //    }
 }

@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct LvlanceApp: App {
-    @StateObject private var  coreDataManager = CoreDataManager.shared
+    @StateObject private var coreDataManager = CoreDataManager.shared
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BandSettingView()
                 .environment(\.managedObjectContext, coreDataManager.persistentContainer.viewContext)
+                .preferredColorScheme(.dark)
+                .environmentObject(coreDataManager)
         }
+        
+
     }
 }
