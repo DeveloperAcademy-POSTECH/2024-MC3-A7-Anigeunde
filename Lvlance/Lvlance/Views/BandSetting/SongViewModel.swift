@@ -23,8 +23,13 @@ class SongViewModel: ObservableObject {
     }
     
     func createSong(selectedInstruments: [Instrument]) {
-        coreDataManager.createSongEntity(instruments: selectedInstruments)
-        setupSongs()
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.coreDataManager.createSongEntity(instruments: selectedInstruments)
+
+            DispatchQueue.main.async {
+                self.setupSongs()
+            }
+        }
     }
     
     func updateInstrument(song: Song, selectedInstruments: [Instrument]) {
