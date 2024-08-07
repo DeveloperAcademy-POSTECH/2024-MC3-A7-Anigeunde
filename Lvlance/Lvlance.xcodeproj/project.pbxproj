@@ -31,12 +31,12 @@
 		B59724B62C4909CD0027990A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B52C4909CD0027990A /* ContentView.swift */; };
 		B59724B82C4909CF0027990A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724B72C4909CF0027990A /* Assets.xcassets */; };
 		B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724BA2C4909CF0027990A /* Preview Assets.xcassets */; };
+		B59ACF772C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59ACF732C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift */; };
+		B59ACF782C634B73003FC9D8 /* InstrumentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59ACF742C634B73003FC9D8 /* InstrumentEntity+CoreDataProperties.swift */; };
+		B59ACF792C634B73003FC9D8 /* SongEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59ACF752C634B73003FC9D8 /* SongEntity+CoreDataClass.swift */; };
+		B59ACF7A2C634B73003FC9D8 /* SongEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59ACF762C634B73003FC9D8 /* SongEntity+CoreDataProperties.swift */; };
 		B5A9F61C2C5A79F600EFD035 /* InstrumentSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */; };
 		B5A9F61F2C5B689500EFD035 /* InstrumentReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F61E2C5B689500EFD035 /* InstrumentReady.swift */; };
-		B5A9F6362C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6322C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift */; };
-		B5A9F6372C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6332C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift */; };
-		B5A9F6382C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6342C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift */; };
-		B5A9F6392C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */; };
 		B5A9F63E2C5BC11400EFD035 /* playButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F63D2C5BC11400EFD035 /* playButtonStyle.swift */; };
 		B5C9B47D2C61014500FE4F81 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9B47C2C61014500FE4F81 /* SongViewModel.swift */; };
 		C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83802C5A292A001B7540 /* OnboardingView.swift */; };
@@ -77,12 +77,12 @@
 		B59724B72C4909CF0027990A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B59724BA2C4909CF0027990A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B59724BC2C4909CF0027990A /* Lvlance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lvlance.entitlements; sourceTree = "<group>"; };
+		B59ACF732C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B59ACF742C634B73003FC9D8 /* InstrumentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B59ACF752C634B73003FC9D8 /* SongEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B59ACF762C634B73003FC9D8 /* SongEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentSelectButton.swift; sourceTree = "<group>"; };
 		B5A9F61E2C5B689500EFD035 /* InstrumentReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentReady.swift; sourceTree = "<group>"; };
-		B5A9F6322C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B5A9F6332C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		B5A9F6342C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B5A9F63D2C5BC11400EFD035 /* playButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playButtonStyle.swift; sourceTree = "<group>"; };
 		B5C9B46C2C5C754900FE4F81 /* TempView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 		B5C9B46D2C5C754900FE4F81 /* SettingPopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPopoverView.swift; sourceTree = "<group>"; };
@@ -226,10 +226,10 @@
 		B59724A72C4909CD0027990A = {
 			isa = PBXGroup;
 			children = (
-				B5A9F6322C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift */,
-				B5A9F6332C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift */,
-				B5A9F6342C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift */,
-				B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */,
+				B59ACF732C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift */,
+				B59ACF742C634B73003FC9D8 /* InstrumentEntity+CoreDataProperties.swift */,
+				B59ACF752C634B73003FC9D8 /* SongEntity+CoreDataClass.swift */,
+				B59ACF762C634B73003FC9D8 /* SongEntity+CoreDataProperties.swift */,
 				B59724B22C4909CD0027990A /* Lvlance */,
 				B59724B12C4909CD0027990A /* Products */,
 				B5A9F63A2C5BB84B00EFD035 /* Recovered References */,
@@ -396,12 +396,12 @@
 				C73C83832C5A297C001B7540 /* OnboardingNextView.swift in Sources */,
 				AF11F9E92C57CC850009E685 /* SoundIdentifier.swift in Sources */,
 				C7D8AC9A2C5B890E001AB123 /* AudioManager.swift in Sources */,
+				B59ACF772C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift in Sources */,
+				B59ACF782C634B73003FC9D8 /* InstrumentEntity+CoreDataProperties.swift in Sources */,
+				B59ACF792C634B73003FC9D8 /* SongEntity+CoreDataClass.swift in Sources */,
+				B59ACF7A2C634B73003FC9D8 /* SongEntity+CoreDataProperties.swift in Sources */,
 				AFB83FAA2C5C76DA00E48896 /* InstrumentBar.swift in Sources */,
 				C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */,
-				B5A9F6362C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift in Sources */,
-				B5A9F6372C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift in Sources */,
-				B5A9F6382C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift in Sources */,
-				B5A9F6392C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift in Sources */,
 				C7D8AC992C5B890E001AB123 /* Device.swift in Sources */,
 				AFB83FAB2C5C76DA00E48896 /* SettingPopoverView.swift in Sources */,
 				AFB83FAC2C5C76DA00E48896 /* TempView.swift in Sources */,

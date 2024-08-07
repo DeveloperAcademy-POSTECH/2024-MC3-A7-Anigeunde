@@ -8,7 +8,7 @@
 import CoreData
 import Foundation
 
-class CoreDataManager: ObservableObject {
+class CoreDataManager {
     static let shared = CoreDataManager()
     lazy var persistentContainer: NSPersistentContainer = {
         
@@ -38,7 +38,7 @@ class CoreDataManager: ObservableObject {
         }
     }
     
-    
+    //TODO: 새 노래 뒤에 번호 붙이기
     func createSongEntity(instruments: [Instrument]) {
         let newSong = SongEntity(context: context)
         newSong.id = UUID()
@@ -46,17 +46,33 @@ class CoreDataManager: ObservableObject {
         newSong.title = "새 노래"
         
         for instrument in instruments {
-            var newInstrument = InstrumentEntity(context: context)
+            let newInstrument = InstrumentEntity(context: context)
             newInstrument.type = instrument.type.rawValue
             newSong.addToInstruments(newInstrument)
         }
         save()
     }
     
-    func fetchAllSongs() -> [SongEntity] {
+    //entity의 식별자를 파라미터로 받아서 찾아와
+    func fetchEntityID(song: Song) -> SongEntity? {
+        let id = song.id
+        let request = SongEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+        request.fetchLimit = 1
+        
+        do {
+            let results = try context.fetch(request)
+            return results.first
+        } catch {
+            print("id값 가져오기 실패: \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
+    func fetchAllSongEntities() -> [SongEntity] {
         do {
             let request = SongEntity.fetchRequest()
-            request.sortDescriptors = [NSSortDescriptor(keyPath: \SongEntity.date, ascending: true)]
+            request.sortDescriptors = [NSSortDescriptor(keyPath: \SongEntity.date, ascending: false)]
             let results = try context.fetch(request)
             return results
         } catch {
@@ -65,15 +81,15 @@ class CoreDataManager: ObservableObject {
         return []
     }
     
-    //TODO: 비동기처리,,?
     func getAllSongs() -> [Song] {
         var songs: [Song] = []
-        let fetchResults = fetchAllSongs()
-        for result in fetchResults {
-            var title = result.title ?? "새 노래"
+        let fetchResults = fetchAllSongEntities()
+        for entity in fetchResults {
+            let id = entity.id ?? UUID()
+            let title = entity.title ?? "새 노래"
             var instruments: [Instrument] = []
             
-            if let instrumentEntities = result.instruments as? Set<InstrumentEntity> {
+            if let instrumentEntities = entity.instruments as? Set<InstrumentEntity> {
                 for instrumentEntity in instrumentEntities {
                     if let entityType = instrumentEntity.type,
                        let type = InstrumentType(rawValue: entityType) {
@@ -82,34 +98,38 @@ class CoreDataManager: ObservableObject {
                     }
                 }
             }
-            
-            let song = Song(title: title, instruments: instruments)
+            let song = Song(id: id, title: title, instruments: instruments)
             songs.append(song)
-            
         }
         return songs
     }
     
-    func updateSongEntity(song: SongEntity, title: String, instruments: [Instrument]) {
-        song.title = title
+    func updateSongEntity(song: Song, title: String? = nil, instruments: [Instrument]? = nil) {
+        let entity = fetchEntityID(song: song)
         
-        if let instruments = song.instruments as? Set<SongEntity> {
+        if let title = title {
+            entity?.title = title
+        }
+        
+        
+        if let instruments = entity?.instruments as? Set<InstrumentEntity> {
+            entity?.removeFromInstruments(instruments as NSSet)
+        }
+        
+        if let instruments = instruments {
             for instrument in instruments {
-                context.delete(instrument)
+                let newInstrument = InstrumentEntity(context: context)
+                newInstrument.type = instrument.type.rawValue
+                entity?.addToInstruments(newInstrument)
             }
         }
-        
-        for instrument in instruments {
-            var newInstrument = InstrumentEntity(context: context)
-            newInstrument.type = instrument.type.rawValue
-            song.addToInstruments(newInstrument)
-        }
-        
         save()
     }
-    //
-    //    func deleteSong(song: SongEntity) {
-    //        context.delete(song)
-    //        save()
-    //    }
+    
+    func deleteSongEntity(song: Song) {
+        if let entity = fetchEntityID(song: song) {
+            context.delete(entity)
+            save()
+        }
+    }
 }
