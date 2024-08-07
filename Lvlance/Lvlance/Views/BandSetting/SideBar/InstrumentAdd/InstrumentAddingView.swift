@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InstrumentAddingView: View {
+    
     @ObservedObject var songViewModel: SongViewModel
     
     @State var selectedInstrumentsType: Set<InstrumentType> = []

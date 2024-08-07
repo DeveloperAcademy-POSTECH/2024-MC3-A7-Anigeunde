@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct SettingPopoverView: View {
-    @State private var inputLevel: Double = 0.5
-    @State private var isExpanded = false
     
     @EnvironmentObject var audioManager: AudioManager
     @StateObject var audioInputLevelManager = AudioInputLevelManager()
     
+    @State private var inputLevel: Double = 0.5
+    @State private var isExpanded = false
     
     var body: some View {
         

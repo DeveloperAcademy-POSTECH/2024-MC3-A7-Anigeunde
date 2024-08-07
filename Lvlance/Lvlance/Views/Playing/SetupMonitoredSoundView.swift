@@ -21,7 +21,6 @@ struct SetupMonitoredSoundsView: View {
     @State private var selectedInstruments: Set<InstrumentType> = []
     @State private var navigationPath = NavigationPath()
     
-
     var body: some View {
         NavigationStack(path: $navigationPath) {
             VStack {
@@ -51,7 +50,6 @@ struct SetupMonitoredSoundsView: View {
                     }
                 }
                 
-                
                 Button(action: {
                     updateSelectedSounds()
                     appState.restartDetection(config: appConfig)
@@ -69,7 +67,6 @@ struct SetupMonitoredSoundsView: View {
                 switch route {
                 case .detectSounds:
                     DetectSoundsView(state: appState, config: $appConfig, path: $navigationPath)
-                                  
                 }
             }
         }

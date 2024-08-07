@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct LvlanceApp: App { 
+    
     @StateObject var audioManager = AudioManager()
 
     var body: some Scene {

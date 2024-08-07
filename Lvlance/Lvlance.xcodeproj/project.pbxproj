@@ -18,7 +18,6 @@
 		AFB83FA92C5C76DA00E48896 /* SetupMonitoredSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA42C5C76DA00E48896 /* SetupMonitoredSoundView.swift */; };
 		AFB83FAA2C5C76DA00E48896 /* InstrumentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA52C5C76DA00E48896 /* InstrumentBar.swift */; };
 		AFB83FAB2C5C76DA00E48896 /* SettingPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA62C5C76DA00E48896 /* SettingPopoverView.swift */; };
-		AFB83FAC2C5C76DA00E48896 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA72C5C76DA00E48896 /* TempView.swift */; };
 		B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED42C4E78D600E8F182 /* MicSelectView.swift */; };
 		B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED62C4E78E400E8F182 /* BandSettingView.swift */; };
 		B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED82C4E78FF00E8F182 /* SideBarView.swift */; };
@@ -58,7 +57,6 @@
 		AFB83FA42C5C76DA00E48896 /* SetupMonitoredSoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMonitoredSoundView.swift; sourceTree = "<group>"; };
 		AFB83FA52C5C76DA00E48896 /* InstrumentBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentBar.swift; sourceTree = "<group>"; };
 		AFB83FA62C5C76DA00E48896 /* SettingPopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPopoverView.swift; sourceTree = "<group>"; };
-		AFB83FA72C5C76DA00E48896 /* TempView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 		B57DBED42C4E78D600E8F182 /* MicSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicSelectView.swift; sourceTree = "<group>"; };
 		B57DBED62C4E78E400E8F182 /* BandSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandSettingView.swift; sourceTree = "<group>"; };
 		B57DBED82C4E78FF00E8F182 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 				AFB83FA52C5C76DA00E48896 /* InstrumentBar.swift */,
 				AFB83FA62C5C76DA00E48896 /* SettingPopoverView.swift */,
 				AFB83FA42C5C76DA00E48896 /* SetupMonitoredSoundView.swift */,
-				AFB83FA72C5C76DA00E48896 /* TempView.swift */,
 			);
 			path = Playing;
 			sourceTree = "<group>";
@@ -198,13 +195,6 @@
 				B57DBF012C54D5A500E8F182 /* CoreDataManager.swift */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		B57DBED32C4E4E7400E8F182 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B57DBEDC2C4E792C00E8F182 /* Resources */ = {
@@ -252,7 +242,6 @@
 				B57DBECB2C4E4BD700E8F182 /* Model */,
 				B57DBED22C4E4D1100E8F182 /* Manager */,
 				B57DBECD2C4E4C0A00E8F182 /* Views */,
-				B57DBED32C4E4E7400E8F182 /* Extensions */,
 				B57DBEDC2C4E792C00E8F182 /* Resources */,
 				B59724B52C4909CD0027990A /* ContentView.swift */,
 				B59724BC2C4909CF0027990A /* Lvlance.entitlements */,
@@ -404,7 +393,6 @@
 				C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */,
 				C7D8AC992C5B890E001AB123 /* Device.swift in Sources */,
 				AFB83FAB2C5C76DA00E48896 /* SettingPopoverView.swift in Sources */,
-				AFB83FAC2C5C76DA00E48896 /* TempView.swift in Sources */,
 				AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */,
 				B5C9B47D2C61014500FE4F81 /* SongViewModel.swift in Sources */,
 				B57DBEDE2C522E0900E8F182 /* Song.swift in Sources */,
