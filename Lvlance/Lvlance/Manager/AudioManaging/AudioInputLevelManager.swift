@@ -10,7 +10,6 @@ import Combine
 import CoreAudio
 import AudioToolbox
 
-
 class AudioInputLevelManager: ObservableObject {
     
     @Published private(set) var currentAudioLevel: Float = 0.0

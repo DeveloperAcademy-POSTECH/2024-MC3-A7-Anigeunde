@@ -9,7 +9,9 @@ import CoreData
 import Foundation
 
 class CoreDataManager {
+    
     static let shared = CoreDataManager()
+    
     lazy var persistentContainer: NSPersistentContainer = {
         
         let container = NSPersistentContainer(name: "BandSong")
@@ -25,7 +27,6 @@ class CoreDataManager {
     var context: NSManagedObjectContext {
         return self.persistentContainer.viewContext
     }
-    
     
     func save() {
         guard context.hasChanges else { return }
