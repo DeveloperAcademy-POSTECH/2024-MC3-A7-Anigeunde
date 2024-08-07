@@ -36,8 +36,8 @@ struct SideBarView: View {
             } label: {
                 Image(systemName: "play.fill")
             }
-            .buttonStyle(playButtonStyle())
             .help("재생 버튼을 눌러 연주를 시작하세요")
+            .buttonStyle(playButtonStyle())            
             
             Spacer().frame(height: 20)
             
@@ -53,10 +53,10 @@ struct SideBarView: View {
                             Image(systemName: "music.note")
                                 .foregroundStyle(.systemPurple)
                         }
-                        .listRowBackground(Color.sidebarFrameBackground)
                         .onTapGesture {
                             songViewModel.selectedSong = song
                         }
+                        .listRowBackground(song.id == songViewModel.selectedSong?.id ? Color.accentColor.opacity(0.6) : Color.sidebarFrameBackground)
                     }
                 } header: {
                     Text("곡 선택하기")
@@ -84,9 +84,10 @@ struct SideBarView: View {
                 isAddingPresented = true
             } label: {
                 Text("곡 추가하기")
-                    .padding(.horizontal, 68)
+                    .frame(width: 212, height: 24)
+                    .foregroundStyle(.white)
             }
-            .buttonStyle(.borderedProminent)
+            .buttonStyle(sideBarButtonStyle())
             
             Spacer().frame(height: 136)
             
@@ -94,9 +95,12 @@ struct SideBarView: View {
                 isEditingPresented = true
             } label: {
                 Text("악기 편집하기")
+                    .frame(width: 92, height: 24)
+                
             }
-            .buttonStyle(.borderedProminent)
-            .padding(.trailing, 8)
+            .buttonStyle(sideBarButtonStyle())
+            
+            
         }
         .padding(12)
         .frame(width: 236, height: 712)
