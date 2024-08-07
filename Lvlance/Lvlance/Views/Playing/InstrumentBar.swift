@@ -14,7 +14,6 @@ struct InstrumentBar: View {
     var body: some View {
         ZStack {
             VStack(spacing: 92) {
-                
                 Text(instrument.krName)
                     .font(.system(size: 22))
                     .background{

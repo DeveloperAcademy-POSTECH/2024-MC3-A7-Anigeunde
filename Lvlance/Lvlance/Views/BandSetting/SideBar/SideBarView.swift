@@ -29,8 +29,8 @@ struct SideBarView: View {
                 appConfig.monitoredSounds = Set(selectedSong.instruments.map {
                     SoundIdentifier(instrument: $0.type)
                 })
-                /// 재생시키기
-                appState.restartDetection(config: appConfig)
+                
+                appState.restartDetection(config: appConfig) // 재생시키기
                 path.append("playView")
                 print("button")
             } label: {

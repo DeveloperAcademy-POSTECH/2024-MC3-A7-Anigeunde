@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InstrumentSelectButton: View {
+    
     @State private var isSelected = false
     @Binding var selectedInstruments: Set<InstrumentType>
     
