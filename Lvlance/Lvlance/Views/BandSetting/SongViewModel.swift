@@ -22,7 +22,6 @@ class SongViewModel: ObservableObject {
         selectedSong = songs.first
     }
     
-    // 확인버튼
     func createSong(selectedInstruments: [Instrument]) {
         coreDataManager.createSongEntity(instruments: selectedInstruments)
         setupSongs()
@@ -50,7 +49,7 @@ class SongViewModel: ObservableObject {
     
     func deleteSong(song: Song) {
         guard let selectedSong = selectedSong else { return }
-        coreDataManager.deleteSongEntity(song: song)
+        coreDataManager.deleteSongEntity(song: selectedSong)
         setupSongs()
     }
 }
