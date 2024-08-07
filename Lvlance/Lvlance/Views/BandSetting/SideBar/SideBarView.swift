@@ -8,20 +8,15 @@
 import SwiftUI
 
 struct SideBarView: View {
-    @EnvironmentObject var coreDataManager: CoreDataManager
-//    @Environment(\.openWindow) private var openWindow
+    @ObservedObject var songViewModel: SongViewModel
+    
     @State private var isSectionExpanded = true
-    
-
-    
-    @Binding var songs: [Song]
-    @Binding var selectedSong: Song?
-    @Binding var isSheetPresented: Bool
+    @Binding var isAddingPresented: Bool
+    @Binding var isEditingPresented: Bool
     
     @ObservedObject var appState: AppState
     @Binding var appConfig: AppConfiguration
     @Binding var path: NavigationPath
-    
     
     var body: some View {
         VStack(alignment: .trailing ,spacing: 0) {
@@ -29,13 +24,15 @@ struct SideBarView: View {
             
             Button {
                 /// 선택된 노래의 악기 정보를 재생할 뷰에 넘겨주기
-                guard let selectedSong = selectedSong else { return }
+                guard let selectedSong = songViewModel.selectedSong else { return }
+                
                 appConfig.monitoredSounds = Set(selectedSong.instruments.map {
                     SoundIdentifier(instrument: $0.type)
                 })
                 /// 재생시키기
                 appState.restartDetection(config: appConfig)
                 path.append("playView")
+                print("button")
             } label: {
                 Image(systemName: "play.fill")
             }
@@ -49,7 +46,7 @@ struct SideBarView: View {
             
             List {
                 Section(isExpanded: $isSectionExpanded) {
-                    ForEach(songs) { song in
+                    ForEach(songViewModel.songs) { song in
                         Label {
                             Text(song.title)
                         } icon: {
@@ -58,7 +55,7 @@ struct SideBarView: View {
                         }
                         .listRowBackground(Color.sidebarFrameBackground)
                         .onTapGesture {
-                            selectedSong = song
+                            songViewModel.selectedSong = song
                         }
                     }
                 } header: {
@@ -70,38 +67,36 @@ struct SideBarView: View {
             .scrollContentBackground(.hidden)
             .listStyle(SidebarListStyle())
             .frame(minHeight: 28, maxHeight: 449)
-            .contextMenu(ContextMenu(menuItems: {
-                //TODO: update, delete
-                Text("곡명 변경하기")
-                Text("곡 삭제하기")
-            }))
+            .contextMenu{
+                Button("곡명 변경하기") {
+                   //TODO: 곡명 변경 만들기
+                }
+                Button("곡 삭제하기") {
+                    if let selectedSong = songViewModel.selectedSong {
+                        songViewModel.deleteSong(song: selectedSong)
+                    }
+                }
+            }
             
             Spacer().frame(height: 30)
             
             Button {
-                ///새 노래 만들기
-                
-                
+                isAddingPresented = true
             } label: {
                 Text("곡 추가하기")
                     .padding(.horizontal, 68)
             }
             .buttonStyle(.borderedProminent)
             
+            Spacer().frame(height: 136)
             
-            
-            Spacer()
-                .frame(height: 136)
-            
-            //TODO: 버튼 바꾸기
             Button {
-                isSheetPresented = true
+                isEditingPresented = true
             } label: {
                 Text("악기 편집하기")
             }
             .buttonStyle(.borderedProminent)
             .padding(.trailing, 8)
-
         }
         .padding(12)
         .frame(width: 236, height: 712)
@@ -111,13 +106,6 @@ struct SideBarView: View {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(AngularGradient(gradient: Gradient(colors: [.gradientBlue, .gradientPurple]), center: .center), lineWidth: 1)
         )
-        .onAppear {
-//            songs = coreDataManager.getAllSongs()
-        }
     }
 }
 
-//#Preview {
-//    SideBarView()
-//        .environment(\.managedObjectContext, CoreDataManager.persistentContainer.viewContext)
-//}

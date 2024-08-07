@@ -10,6 +10,7 @@ import SwiftUI
 struct InstrumentSelectButton: View {
     @State private var isSelected = false
     @Binding var selectedInstruments: Set<InstrumentType>
+    
     let instrumentType: InstrumentType
 
     var body: some View {
@@ -27,7 +28,11 @@ struct InstrumentSelectButton: View {
                         }
                     }
             }
-            
+        }
+        .onAppear {
+            if selectedInstruments.contains(instrumentType) {
+                isSelected = true
+            }
         }
     }
 }

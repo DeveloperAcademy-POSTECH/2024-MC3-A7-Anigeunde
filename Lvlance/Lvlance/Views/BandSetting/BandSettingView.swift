@@ -8,23 +8,24 @@
 import SwiftUI
 
 struct BandSettingView: View {
-    @EnvironmentObject var coreDataManager: CoreDataManager
+    @StateObject var songViewModel = SongViewModel()
+    
+    @State private var isAddingPresented = false
+    @State private var isEditingPresented = false
+    
     @StateObject var appState = AppState()
     @State var appConfig = AppConfiguration()
     @State var path = NavigationPath()
-    @State var songs: [Song] = []
-    @State var selectedSong: Song?
-    @State private var isSheetPresented = false
-
     
     var body: some View {
         NavigationStack(path: $path) {
             HStack {
-                SideBarView(songs: $songs, selectedSong: $selectedSong, isSheetPresented: $isSheetPresented, appState: appState, appConfig: $appConfig, path: $path)
+                SideBarView(songViewModel: songViewModel, isAddingPresented: $isAddingPresented, isEditingPresented: $isEditingPresented, appState: appState, appConfig: $appConfig, path: $path)
                     .padding(.leading, 20)
                 
                 Spacer()
-                if let selectedSong = selectedSong {
+                
+                if let selectedSong = songViewModel.selectedSong {
                     ForEach(selectedSong.instruments) { instrument in
                         InstrumentReady(instrument: instrument)
                     }
@@ -34,31 +35,21 @@ struct BandSettingView: View {
                         .foregroundStyle(.white)
                         .padding(.horizontal, 500)
                 }
-                
                 Spacer()
-                
             }
-
-            
+            .navigationDestination(for: String.self) { string in
+                if string == "playView" {
+                    DetectSoundsView(state: appState, config: $appConfig, path: $path)
+                }
+            }
         }
         .frame(width: 1510, height: 834)
-
-        .navigationDestination(for: String.self) { string in
-            if string == "playView" {
-                DetectSoundsView(state: appState, config: $appConfig, path: $path)
-            }
-        }
+        .sheet(isPresented: $isEditingPresented, content: {
+            InstrumentAddingView(songViewModel: songViewModel, isSheetPresented: $isEditingPresented, isEdit: true)
+        })
+        .sheet(isPresented: $isAddingPresented, content: {
+            InstrumentAddingView(songViewModel: songViewModel, isSheetPresented: $isAddingPresented)
+        })
         
-        .onAppear {
-            songs = coreDataManager.getAllSongs()
-            getSelectedSong()
-            print(selectedSong)
-        }
-    }
-    
-    func getSelectedSong() {
-        if !songs.isEmpty {
-            selectedSong = songs.first
-        }
     }
 }
