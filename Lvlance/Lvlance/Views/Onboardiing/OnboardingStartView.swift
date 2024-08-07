@@ -34,7 +34,14 @@ struct OnboardingStartView: View {
                 Spacer()
                 Button(action: action) {
                     Text(buttonText)
+                        .multilineTextAlignment(.center)
+                        .frame(width: 38.5, height: 20)
+                        .background( Color.systemPurple)
+                        .cornerRadius(6)
+
                 }
+                .frame(width: 38.5, height: 20)
+                .cornerRadius(6)
                 .keyboardShortcut(.defaultAction)
             }
             .padding(.horizontal, 20)

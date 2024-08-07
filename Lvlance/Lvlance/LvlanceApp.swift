@@ -18,6 +18,5 @@ struct LvlanceApp: App {
                 .preferredColorScheme(.dark)
                 .environmentObject(audioManager)
         }
-        
     }
 }
