@@ -24,6 +24,7 @@ struct OnboardingNextView: View {
                 .padding()
             
             Text(description)
+                .multilineTextAlignment(.center)
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
                 .foregroundColor(.white)
@@ -34,11 +35,25 @@ struct OnboardingNextView: View {
                 Spacer()
                 Button(action: backAction) {
                     Text("뒤로")
+                        .multilineTextAlignment(.center)
+                        .frame(width: 38.5, height: 20)
+                        .background( Color.gray)
+                        .cornerRadius(6)
+
                 }
+                .frame(width: 38.5, height: 20)
+                .cornerRadius(6)
                 .keyboardShortcut(.cancelAction)
                 Button(action: action) {
                     Text(buttonText)
+                        .multilineTextAlignment(.center)
+                        .frame(width: 38.5, height: 20)
+                        .background( Color.systemPurple)
+                        .cornerRadius(6)
+
                 }
+                .frame(width: 38.5, height: 20)
+                .cornerRadius(6)
                 .keyboardShortcut(.defaultAction)
             }
             .padding(.horizontal, 20)

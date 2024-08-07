@@ -8,12 +8,23 @@
 import SwiftUI
 
 @main
-struct LvlanceApp: App {    
+struct LvlanceApp: App {
+    //    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
+    @State private var hasSeenOnboarding = false
+    
+    
     var body: some Scene {
         WindowGroup {
-            BandSettingView()
-                .preferredColorScheme(.dark)
+            if hasSeenOnboarding {
+                BandSettingView()
+                    .preferredColorScheme(.dark)
+            }else {
+                OnboardingView(hasSeenOnboarding: $hasSeenOnboarding)
+                    .preferredColorScheme(.dark)
+                    .frame(width: 777, height: 507)
+                    .fixedSize(horizontal: true, vertical: true)
+            }
         }
-        
+        .windowResizability(!hasSeenOnboarding ? .contentSize : .automatic)
     }
 }

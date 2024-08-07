@@ -16,8 +16,8 @@ struct OnboardingView: View {
             switch currentStep {
             case 0:
                 OnboardingStartView(
-                    image: "image",
-                    description: "밴드의 전체 소리를 입력할 김태린의 아이폰을 스피커 앞에 둡니다.",
+                    image: "onboardingImage1",
+                    description: "밴드의 전체 소리를 입력할 iPhone을 관객 쪽을 향하는 스피커의 앞에 둡니다.",
                     buttonText: "다음",
                     action: {
                         currentStep += 1
@@ -25,8 +25,8 @@ struct OnboardingView: View {
                 )
             case 1:
                 OnboardingNextView(
-                    image: "image",
-                    description: "멘트는 무엇으로 할까요?",
+                    image: "onboardingImage2",
+                    description: "밴드의 전체 소리를 입력할 iPhone을 macBook에 선으로 연결합니다.",
                     buttonText: "다음",
                     backAction: {
                         currentStep -= 1
@@ -38,8 +38,8 @@ struct OnboardingView: View {
                 )
             case 2:
                 OnboardingNextView(
-                    image: "image",
-                    description: "메롱 약오르지롱",
+                    image: "onboardingImage3",
+                    description: "Lvlance는 밴드 연주 중, 관객에게 들리는 밴드의 전체 소리를 연주자가 시각적으로 알 수 있는 앱입니다.\n지금 바로 입력 기기를 연결하여 Lvlance를 사용해 보세요!",
                     buttonText: "완료",
                     backAction: {
                         currentStep -= 1
