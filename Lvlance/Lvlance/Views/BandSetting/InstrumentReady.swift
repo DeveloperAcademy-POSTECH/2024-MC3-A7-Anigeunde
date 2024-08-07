@@ -19,6 +19,7 @@ struct InstrumentReady: View {
             Image(instrument.type.outlineImage)
                 .opacity(0.4)
         }
+        .frame(width: 200, height: 569)
     }
 }
 
