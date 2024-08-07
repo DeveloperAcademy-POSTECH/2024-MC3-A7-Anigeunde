@@ -160,11 +160,10 @@
 		B57DBECF2C4E4C6C00E8F182 /* BandSetting */ = {
 			isa = PBXGroup;
 			children = (
+				B5C9B47C2C61014500FE4F81 /* SongViewModel.swift */,
 				B57DBED62C4E78E400E8F182 /* BandSettingView.swift */,
 				B5A9F61E2C5B689500EFD035 /* InstrumentReady.swift */,
-				B5A9F61D2C5A7A0100EFD035 /* InstrumentAdd */,
 				B57DBED02C4E4C9600E8F182 /* SideBar */,
-				B5C9B47C2C61014500FE4F81 /* SongViewModel.swift */,
 			);
 			path = BandSetting;
 			sourceTree = "<group>";
@@ -174,6 +173,7 @@
 			children = (
 				B57DBED82C4E78FF00E8F182 /* SideBarView.swift */,
 				B5A9F63D2C5BC11400EFD035 /* playButtonStyle.swift */,
+				B5A9F61D2C5A7A0100EFD035 /* InstrumentAdd */,
 			);
 			path = SideBar;
 			sourceTree = "<group>";
