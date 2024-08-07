@@ -8,11 +8,104 @@
 import SwiftUI
 
 struct SideBarView: View {
+    @ObservedObject var songViewModel: SongViewModel
+    
+    @State private var isSectionExpanded = true
+    @Binding var isAddingPresented: Bool
+    @Binding var isEditingPresented: Bool
+    
+    @ObservedObject var appState: AppState
+    @Binding var appConfig: AppConfiguration
+    @Binding var path: NavigationPath
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .trailing ,spacing: 0) {
+            Spacer().frame(height: 46)
+            
+            Button {
+                /// 선택된 노래의 악기 정보를 재생할 뷰에 넘겨주기
+                guard let selectedSong = songViewModel.selectedSong else { return }
+                
+                appConfig.monitoredSounds = Set(selectedSong.instruments.map {
+                    SoundIdentifier(instrument: $0.type)
+                })
+                /// 재생시키기
+                appState.restartDetection(config: appConfig)
+                path.append("playView")
+                print("button")
+            } label: {
+                Image(systemName: "play.fill")
+            }
+            .buttonStyle(playButtonStyle())
+            .help("재생 버튼을 눌러 연주를 시작하세요")
+            
+            Spacer().frame(height: 20)
+            
+            Divider()
+                .foregroundStyle(.sidebarDivider)
+            
+            List {
+                Section(isExpanded: $isSectionExpanded) {
+                    ForEach(songViewModel.songs) { song in
+                        Label {
+                            Text(song.title)
+                        } icon: {
+                            Image(systemName: "music.note")
+                                .foregroundStyle(.systemPurple)
+                        }
+                        .listRowBackground(Color.sidebarFrameBackground)
+                        .onTapGesture {
+                            songViewModel.selectedSong = song
+                        }
+                    }
+                } header: {
+                    Text("곡 선택하기")
+                        .foregroundStyle(.white)
+                        .padding(.bottom, 7)
+                }
+            }
+            .scrollContentBackground(.hidden)
+            .listStyle(SidebarListStyle())
+            .frame(minHeight: 28, maxHeight: 449)
+            .contextMenu{
+                Button("곡명 변경하기") {
+                   //TODO: 곡명 변경 만들기
+                }
+                Button("곡 삭제하기") {
+                    if let selectedSong = songViewModel.selectedSong {
+                        songViewModel.deleteSong(song: selectedSong)
+                    }
+                }
+            }
+            
+            Spacer().frame(height: 30)
+            
+            Button {
+                isAddingPresented = true
+            } label: {
+                Text("곡 추가하기")
+                    .padding(.horizontal, 68)
+            }
+            .buttonStyle(.borderedProminent)
+            
+            Spacer().frame(height: 136)
+            
+            Button {
+                isEditingPresented = true
+            } label: {
+                Text("악기 편집하기")
+            }
+            .buttonStyle(.borderedProminent)
+            .padding(.trailing, 8)
+        }
+        .padding(12)
+        .frame(width: 236, height: 712)
+        .background(.sidebarBackground)
+        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(AngularGradient(gradient: Gradient(colors: [.gradientBlue, .gradientPurple]), center: .center), lineWidth: 1)
+        )
     }
 }
 
-#Preview {
-    SideBarView()
-}

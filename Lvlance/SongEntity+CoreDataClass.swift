@@ -2,7 +2,7 @@
 //  SongEntity+CoreDataClass.swift
 //  Lvlance
 //
-//  Created by 지영 on 8/1/24.
+//  Created by 지영 on 8/7/24.
 //
 //
 
