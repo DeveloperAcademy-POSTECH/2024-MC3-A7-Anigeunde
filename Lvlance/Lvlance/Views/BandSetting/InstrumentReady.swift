@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct InstrumentReady: View {    
-    let instrument: Instrument
+    let instrument: InstrumentType
     
     var body: some View {
         VStack {
-            Text(instrument.type.rawValue)
+            Text(instrument.rawValue)
             
             Spacer().frame(height: 92)
             
-            Image(instrument.type.outlineImage)
+            Image(instrument.outlineImage)
                 .opacity(0.4)
         }
         .frame(width: 200, height: 569)
