@@ -9,14 +9,14 @@ import SwiftUI
 
 @main
 struct LvlanceApp: App {
-    @StateObject private var coreDataManager = CoreDataManager.shared
+//    @StateObject private var songViewModel = SongViewModel()
     
     var body: some Scene {
         WindowGroup {
             BandSettingView()
-                .environment(\.managedObjectContext, coreDataManager.persistentContainer.viewContext)
+//                .environment(\.managedObjectContext, coreDataManager.persistentContainer.viewContext)
                 .preferredColorScheme(.dark)
-                .environmentObject(coreDataManager)
+//                .environmentObject(songViewModel)
         }
         
 
