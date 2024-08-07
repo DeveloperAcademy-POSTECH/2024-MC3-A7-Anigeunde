@@ -8,11 +8,14 @@
 import SwiftUI
 
 @main
-struct LvlanceApp: App {    
+struct LvlanceApp: App { 
+    @StateObject var audioManager = AudioManager()
+
     var body: some Scene {
         WindowGroup {
             BandSettingView()
                 .preferredColorScheme(.dark)
+                .environmentObject(audioManager)
         }
         
     }

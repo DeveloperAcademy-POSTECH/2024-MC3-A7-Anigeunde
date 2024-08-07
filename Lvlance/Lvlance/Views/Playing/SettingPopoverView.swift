@@ -11,8 +11,7 @@ struct SettingPopoverView: View {
     @State private var inputLevel: Double = 0.5
     @State private var isExpanded = false
     
-    //  BandSettingView에서 초기화해서 받아와야함
-    @StateObject var audioManager = AudioManager()
+    @EnvironmentObject var audioManager: AudioManager
     @StateObject var audioInputLevelManager = AudioInputLevelManager()
     
     
@@ -68,10 +67,6 @@ struct SettingPopoverView: View {
         .foregroundColor(.white)
         .onAppear {
             audioInputLevelManager.startMonitoring()
-            Task {
-                await audioManager.start()
-                print("Audio devices: \(audioManager.audioDevices)") // 디버깅용
-            }
         }
         .onDisappear {
             audioInputLevelManager.stopMonitoring()
