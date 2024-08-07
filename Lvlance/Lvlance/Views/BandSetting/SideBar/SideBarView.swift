@@ -32,7 +32,6 @@ struct SideBarView: View {
                 
                 appState.restartDetection(config: appConfig) // 재생시키기
                 path.append("playView")
-                print("button")
             } label: {
                 Image(systemName: "play.fill")
             }
