@@ -11,10 +11,11 @@ import SoundAnalysis
 
 class AppState: ObservableObject {
 
+    @Published var detectionStates: [(SoundIdentifier, DetectionState)] = []
+    @Published var soundDetectionIsRunning: Bool = false
+    
     private var detectionCancellable: AnyCancellable? = nil
     private var appConfig = AppConfiguration()
-    @Published var detectionStates: [(SoundIdentifier, DetectionState)] = []
-    @Published var soundDetectionIsRunning: Bool = false 
 
     
     func restartDetection(config: AppConfiguration) {
