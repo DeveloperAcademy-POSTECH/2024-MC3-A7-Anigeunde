@@ -39,22 +39,6 @@ class CoreDataManager {
         }
     }
     
-    //TODO: 새 노래 뒤에 번호 붙이기
-    func createSongEntity(instruments: [Instrument]) {
-        let newSong = SongEntity(context: context)
-        newSong.id = UUID()
-        newSong.date = Date()
-        newSong.title = "새 노래"
-        
-        for instrument in instruments {
-            let newInstrument = InstrumentEntity(context: context)
-            newInstrument.type = instrument.type.rawValue
-            newSong.addToInstruments(newInstrument)
-        }
-        save()
-    }
-    
-    //entity의 식별자를 파라미터로 받아서 찾아와
     func fetchEntityID(song: Song) -> SongEntity? {
         let id = song.id
         let request = SongEntity.fetchRequest()
@@ -68,6 +52,35 @@ class CoreDataManager {
             print("id값 가져오기 실패: \(error.localizedDescription)")
             return nil
         }
+    }
+    
+    func getSongCounts() -> Int {
+        let request = SongEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "title BEGINSWITH '새 노래'")
+        
+        do {
+            let count = try context.count(for: request)
+            return count
+        } catch {
+            print("새 노래 개수: \(error.localizedDescription)")
+            return 0
+        }
+    }
+    
+    func createSongEntity(instruments: [Instrument]) {
+        let newSong = SongEntity(context: context)
+        newSong.id = UUID()
+        newSong.date = Date()
+        
+        let songCount = getSongCounts()
+        newSong.title = "새 노래 \(songCount + 1)"
+        
+        for instrument in instruments {
+            let newInstrument = InstrumentEntity(context: context)
+            newInstrument.type = instrument.type.rawValue
+            newSong.addToInstruments(newInstrument)
+        }
+        save()
     }
     
     func fetchAllSongEntities() -> [SongEntity] {

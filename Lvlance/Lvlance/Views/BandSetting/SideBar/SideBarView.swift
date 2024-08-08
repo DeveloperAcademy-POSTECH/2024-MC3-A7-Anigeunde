@@ -32,7 +32,6 @@ struct SideBarView: View {
                 
                 appState.restartDetection(config: appConfig) // 재생시키기
                 path.append("playView")
-                print("button")
             } label: {
                 Image(systemName: "play.fill")
             }
@@ -50,8 +49,13 @@ struct SideBarView: View {
                         Label {
                             Text(song.title)
                         } icon: {
-                            Image(systemName: "music.note")
-                                .foregroundStyle(.systemPurple)
+                            if song.id == songViewModel.selectedSong?.id {
+                                Image(systemName: "checkmark")
+                                    .foregroundStyle(Color.white)
+                            } else {
+                                Image(systemName: "music.note")
+                                    .foregroundStyle(.systemPurple)
+                            }
                         }
                         .onTapGesture {
                             songViewModel.selectedSong = song
