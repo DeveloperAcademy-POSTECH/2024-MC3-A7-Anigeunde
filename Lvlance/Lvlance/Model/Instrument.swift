@@ -88,6 +88,39 @@ enum InstrumentType: String, CaseIterable {
             "outline_drum"
         }
     }
+    
+    var defaultDetectionState: DetectionState {
+            switch self {
+            case .vocal:
+                return DetectionState(presenceThreshold: 0.3, absenceThreshold: 0.15, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 39)
+            case .keyboard:
+                return DetectionState(presenceThreshold: 0.06, absenceThreshold: 0.04, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 33)
+            case .bass:
+                return DetectionState(presenceThreshold: 0.3, absenceThreshold: 0.15, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 33)
+            case .electric:
+                return DetectionState(presenceThreshold: 0.36, absenceThreshold: 0.3, presenceMeasurementsToStartDetection: 3, absenceMeasurementsToEndDetection: 33)
+            case .drum:
+                return DetectionState(presenceThreshold: 0.1, absenceThreshold: 0.06, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 36)
+            }
+        }
+    
+    var varientSize : Double {
+        switch self {
+        case .vocal:
+            return 1.3
+        case .keyboard:
+            return 2.1
+        case .bass:
+            return 1.3
+        case .electric:
+            return 1.2
+        case .drum:
+            return 1.5
+        }
+    }
+        
+    
+    
 }
 
 struct Instrument: Identifiable, Hashable {
