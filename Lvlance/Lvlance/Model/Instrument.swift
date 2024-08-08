@@ -51,11 +51,11 @@ enum InstrumentType: String, CaseIterable {
         case .keyboard:
             1
         case .bass:
-            2
-        case .electric:
-            3
-        case .drum:
             4
+        case .electric:
+            2
+        case .drum:
+            3
         }
     }
     
