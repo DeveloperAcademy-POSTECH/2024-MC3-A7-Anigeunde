@@ -8,13 +8,25 @@
 import SwiftUI
 
 @main
-struct LvlanceApp: App {
-    @StateObject private var  coreDataManager = CoreDataManager.shared
+struct LvlanceApp: App { 
+    
+    @StateObject var audioManager = AudioManager()
+    //    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
+    @State private var hasSeenOnboarding = false
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, coreDataManager.persistentContainer.viewContext)
+            if hasSeenOnboarding {
+                BandSettingView()
+                    .preferredColorScheme(.dark)
+                    
+            } else {
+                OnboardingView(hasSeenOnboarding: $hasSeenOnboarding)
+                    .preferredColorScheme(.dark)
+                    .fixedSize(horizontal: true, vertical: true)
+            }
         }
+        .environmentObject(audioManager)
+        .windowResizability(!hasSeenOnboarding ? .contentSize : .automatic)
     }
 }

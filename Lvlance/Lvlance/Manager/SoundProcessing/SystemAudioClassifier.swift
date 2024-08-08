@@ -10,7 +10,6 @@ import AVFoundation
 import SoundAnalysis
 import Combine
 
-
 final class SystemAudioClassifier: NSObject {
     
     enum SystemAudioClassificationError: Error {

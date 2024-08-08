@@ -18,7 +18,6 @@
 		AFB83FA92C5C76DA00E48896 /* SetupMonitoredSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA42C5C76DA00E48896 /* SetupMonitoredSoundView.swift */; };
 		AFB83FAA2C5C76DA00E48896 /* InstrumentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA52C5C76DA00E48896 /* InstrumentBar.swift */; };
 		AFB83FAB2C5C76DA00E48896 /* SettingPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA62C5C76DA00E48896 /* SettingPopoverView.swift */; };
-		AFB83FAC2C5C76DA00E48896 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA72C5C76DA00E48896 /* TempView.swift */; };
 		B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED42C4E78D600E8F182 /* MicSelectView.swift */; };
 		B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED62C4E78E400E8F182 /* BandSettingView.swift */; };
 		B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED82C4E78FF00E8F182 /* SideBarView.swift */; };
@@ -26,14 +25,19 @@
 		B57DBEE22C52327500E8F182 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBEE12C52327500E8F182 /* Instrument.swift */; };
 		B57DBEEF2C54A50E00E8F182 /* BandSong.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B57DBEED2C54A50E00E8F182 /* BandSong.xcdatamodeld */; };
 		B57DBF022C54D5A500E8F182 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF012C54D5A500E8F182 /* CoreDataManager.swift */; };
+		B57DBF0E2C5A240700E8F182 /* InstrumentAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF0D2C5A240700E8F182 /* InstrumentAddingView.swift */; };
 		B59724B42C4909CD0027990A /* LvlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B32C4909CD0027990A /* LvlanceApp.swift */; };
 		B59724B62C4909CD0027990A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B52C4909CD0027990A /* ContentView.swift */; };
 		B59724B82C4909CF0027990A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724B72C4909CF0027990A /* Assets.xcassets */; };
 		B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724BA2C4909CF0027990A /* Preview Assets.xcassets */; };
-		B5A9F6362C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6322C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift */; };
-		B5A9F6372C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6332C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift */; };
-		B5A9F6382C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6342C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift */; };
-		B5A9F6392C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */; };
+		B59ACF772C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59ACF732C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift */; };
+		B59ACF782C634B73003FC9D8 /* InstrumentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59ACF742C634B73003FC9D8 /* InstrumentEntity+CoreDataProperties.swift */; };
+		B59ACF792C634B73003FC9D8 /* SongEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59ACF752C634B73003FC9D8 /* SongEntity+CoreDataClass.swift */; };
+		B59ACF7A2C634B73003FC9D8 /* SongEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59ACF762C634B73003FC9D8 /* SongEntity+CoreDataProperties.swift */; };
+		B5A9F61C2C5A79F600EFD035 /* InstrumentSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */; };
+		B5A9F61F2C5B689500EFD035 /* InstrumentReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F61E2C5B689500EFD035 /* InstrumentReady.swift */; };
+		B5A9F63E2C5BC11400EFD035 /* playButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9F63D2C5BC11400EFD035 /* playButtonStyle.swift */; };
+		B5C9B47D2C61014500FE4F81 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9B47C2C61014500FE4F81 /* SongViewModel.swift */; };
 		C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83802C5A292A001B7540 /* OnboardingView.swift */; };
 		C73C83832C5A297C001B7540 /* OnboardingNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83822C5A297C001B7540 /* OnboardingNextView.swift */; };
 		C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C83842C5A299B001B7540 /* OnboardingStartView.swift */; };
@@ -53,7 +57,6 @@
 		AFB83FA42C5C76DA00E48896 /* SetupMonitoredSoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMonitoredSoundView.swift; sourceTree = "<group>"; };
 		AFB83FA52C5C76DA00E48896 /* InstrumentBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentBar.swift; sourceTree = "<group>"; };
 		AFB83FA62C5C76DA00E48896 /* SettingPopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPopoverView.swift; sourceTree = "<group>"; };
-		AFB83FA72C5C76DA00E48896 /* TempView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 		B57DBED42C4E78D600E8F182 /* MicSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicSelectView.swift; sourceTree = "<group>"; };
 		B57DBED62C4E78E400E8F182 /* BandSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandSettingView.swift; sourceTree = "<group>"; };
 		B57DBED82C4E78FF00E8F182 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
@@ -61,16 +64,30 @@
 		B57DBEE12C52327500E8F182 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		B57DBEEE2C54A50E00E8F182 /* BandSong.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BandSong.xcdatamodel; sourceTree = "<group>"; };
 		B57DBF012C54D5A500E8F182 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B57DBF032C58C70600E8F182 /* SongEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SongEntity+CoreDataClass.swift"; path = "Lvlance/Data/SongEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B57DBF042C58C70600E8F182 /* SongEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SongEntity+CoreDataProperties.swift"; path = "Lvlance/Data/SongEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B57DBF052C58C70600E8F182 /* InstrumentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "InstrumentEntity+CoreDataClass.swift"; path = "Lvlance/Data/InstrumentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B57DBF062C58C70600E8F182 /* InstrumentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "InstrumentEntity+CoreDataProperties.swift"; path = "Lvlance/Data/InstrumentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B57DBF0D2C5A240700E8F182 /* InstrumentAddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentAddingView.swift; sourceTree = "<group>"; };
 		B59724B02C4909CD0027990A /* Lvlance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lvlance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59724B32C4909CD0027990A /* LvlanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LvlanceApp.swift; sourceTree = "<group>"; };
 		B59724B52C4909CD0027990A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B59724B72C4909CF0027990A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B59724BA2C4909CF0027990A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B59724BC2C4909CF0027990A /* Lvlance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lvlance.entitlements; sourceTree = "<group>"; };
-		B5A9F6322C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B5A9F6332C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		B5A9F6342C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B59ACF732C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B59ACF742C634B73003FC9D8 /* InstrumentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstrumentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B59ACF752C634B73003FC9D8 /* SongEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B59ACF762C634B73003FC9D8 /* SongEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SongEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentSelectButton.swift; sourceTree = "<group>"; };
+		B5A9F61E2C5B689500EFD035 /* InstrumentReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentReady.swift; sourceTree = "<group>"; };
+		B5A9F63D2C5BC11400EFD035 /* playButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playButtonStyle.swift; sourceTree = "<group>"; };
+		B5C9B46C2C5C754900FE4F81 /* TempView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
+		B5C9B46D2C5C754900FE4F81 /* SettingPopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPopoverView.swift; sourceTree = "<group>"; };
+		B5C9B46E2C5C754A00FE4F81 /* InstrumentBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentBar.swift; sourceTree = "<group>"; };
+		B5C9B46F2C5C754A00FE4F81 /* SetupMonitoredSoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMonitoredSoundView.swift; sourceTree = "<group>"; };
+		B5C9B4702C5C754A00FE4F81 /* DetectSoundsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectSoundsView.swift; sourceTree = "<group>"; };
+		B5C9B47C2C61014500FE4F81 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		C73C83802C5A292A001B7540 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C73C83822C5A297C001B7540 /* OnboardingNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNextView.swift; sourceTree = "<group>"; };
 		C73C83842C5A299B001B7540 /* OnboardingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
@@ -141,7 +158,9 @@
 		B57DBECF2C4E4C6C00E8F182 /* BandSetting */ = {
 			isa = PBXGroup;
 			children = (
+				B5C9B47C2C61014500FE4F81 /* SongViewModel.swift */,
 				B57DBED62C4E78E400E8F182 /* BandSettingView.swift */,
+				B5A9F61E2C5B689500EFD035 /* InstrumentReady.swift */,
 				B57DBED02C4E4C9600E8F182 /* SideBar */,
 			);
 			path = BandSetting;
@@ -151,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				B57DBED82C4E78FF00E8F182 /* SideBarView.swift */,
+				B5A9F63D2C5BC11400EFD035 /* playButtonStyle.swift */,
+				B5A9F61D2C5A7A0100EFD035 /* InstrumentAdd */,
 			);
 			path = SideBar;
 			sourceTree = "<group>";
@@ -162,7 +183,6 @@
 				AFB83FA52C5C76DA00E48896 /* InstrumentBar.swift */,
 				AFB83FA62C5C76DA00E48896 /* SettingPopoverView.swift */,
 				AFB83FA42C5C76DA00E48896 /* SetupMonitoredSoundView.swift */,
-				AFB83FA72C5C76DA00E48896 /* TempView.swift */,
 			);
 			path = Playing;
 			sourceTree = "<group>";
@@ -175,13 +195,6 @@
 				B57DBF012C54D5A500E8F182 /* CoreDataManager.swift */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		B57DBED32C4E4E7400E8F182 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B57DBEDC2C4E792C00E8F182 /* Resources */ = {
@@ -203,12 +216,13 @@
 		B59724A72C4909CD0027990A = {
 			isa = PBXGroup;
 			children = (
-				B5A9F6322C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift */,
-				B5A9F6332C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift */,
-				B5A9F6342C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift */,
-				B5A9F6352C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift */,
+				B59ACF732C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift */,
+				B59ACF742C634B73003FC9D8 /* InstrumentEntity+CoreDataProperties.swift */,
+				B59ACF752C634B73003FC9D8 /* SongEntity+CoreDataClass.swift */,
+				B59ACF762C634B73003FC9D8 /* SongEntity+CoreDataProperties.swift */,
 				B59724B22C4909CD0027990A /* Lvlance */,
 				B59724B12C4909CD0027990A /* Products */,
+				B5A9F63A2C5BB84B00EFD035 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -228,7 +242,6 @@
 				B57DBECB2C4E4BD700E8F182 /* Model */,
 				B57DBED22C4E4D1100E8F182 /* Manager */,
 				B57DBECD2C4E4C0A00E8F182 /* Views */,
-				B57DBED32C4E4E7400E8F182 /* Extensions */,
 				B57DBEDC2C4E792C00E8F182 /* Resources */,
 				B59724B52C4909CD0027990A /* ContentView.swift */,
 				B59724BC2C4909CF0027990A /* Lvlance.entitlements */,
@@ -243,6 +256,31 @@
 				B59724BA2C4909CF0027990A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B5A9F61D2C5A7A0100EFD035 /* InstrumentAdd */ = {
+			isa = PBXGroup;
+			children = (
+				B57DBF0D2C5A240700E8F182 /* InstrumentAddingView.swift */,
+				B5A9F61B2C5A79F600EFD035 /* InstrumentSelectButton.swift */,
+			);
+			path = InstrumentAdd;
+			sourceTree = "<group>";
+		};
+		B5A9F63A2C5BB84B00EFD035 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				B57DBF032C58C70600E8F182 /* SongEntity+CoreDataClass.swift */,
+				B57DBF042C58C70600E8F182 /* SongEntity+CoreDataProperties.swift */,
+				B57DBF052C58C70600E8F182 /* InstrumentEntity+CoreDataClass.swift */,
+				B57DBF062C58C70600E8F182 /* InstrumentEntity+CoreDataProperties.swift */,
+				B5C9B46F2C5C754A00FE4F81 /* SetupMonitoredSoundView.swift */,
+				B5C9B4702C5C754A00FE4F81 /* DetectSoundsView.swift */,
+				B5C9B46D2C5C754900FE4F81 /* SettingPopoverView.swift */,
+				B5C9B46C2C5C754900FE4F81 /* TempView.swift */,
+				B5C9B46E2C5C754A00FE4F81 /* InstrumentBar.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		C73C837F2C5A28F1001B7540 /* Onboardiing */ = {
@@ -347,16 +385,16 @@
 				C73C83832C5A297C001B7540 /* OnboardingNextView.swift in Sources */,
 				AF11F9E92C57CC850009E685 /* SoundIdentifier.swift in Sources */,
 				C7D8AC9A2C5B890E001AB123 /* AudioManager.swift in Sources */,
+				B59ACF772C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift in Sources */,
+				B59ACF782C634B73003FC9D8 /* InstrumentEntity+CoreDataProperties.swift in Sources */,
+				B59ACF792C634B73003FC9D8 /* SongEntity+CoreDataClass.swift in Sources */,
+				B59ACF7A2C634B73003FC9D8 /* SongEntity+CoreDataProperties.swift in Sources */,
 				AFB83FAA2C5C76DA00E48896 /* InstrumentBar.swift in Sources */,
 				C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */,
-				B5A9F6362C5BB65F00EFD035 /* InstrumentEntity+CoreDataClass.swift in Sources */,
-				B5A9F6372C5BB65F00EFD035 /* InstrumentEntity+CoreDataProperties.swift in Sources */,
-				B5A9F6382C5BB65F00EFD035 /* SongEntity+CoreDataClass.swift in Sources */,
-				B5A9F6392C5BB65F00EFD035 /* SongEntity+CoreDataProperties.swift in Sources */,
 				C7D8AC992C5B890E001AB123 /* Device.swift in Sources */,
 				AFB83FAB2C5C76DA00E48896 /* SettingPopoverView.swift in Sources */,
-				AFB83FAC2C5C76DA00E48896 /* TempView.swift in Sources */,
 				AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */,
+				B5C9B47D2C61014500FE4F81 /* SongViewModel.swift in Sources */,
 				B57DBEDE2C522E0900E8F182 /* Song.swift in Sources */,
 				C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */,
 				B57DBEEF2C54A50E00E8F182 /* BandSong.xcdatamodeld in Sources */,
@@ -364,6 +402,7 @@
 				B59724B62C4909CD0027990A /* ContentView.swift in Sources */,
 				B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */,
 				AFB83FA82C5C76DA00E48896 /* DetectSoundsView.swift in Sources */,
+				B5A9F61F2C5B689500EFD035 /* InstrumentReady.swift in Sources */,
 				B57DBEE22C52327500E8F182 /* Instrument.swift in Sources */,
 				AF11F9EF2C57DE7F0009E685 /* AppConfiguration.swift in Sources */,
 				AF11F9F32C587C4D0009E685 /* AppState.swift in Sources */,
@@ -371,7 +410,10 @@
 				B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */,
 				AF11F9ED2C57D5BD0009E685 /* ClassificationResultsSubject.swift in Sources */,
 				B59724B42C4909CD0027990A /* LvlanceApp.swift in Sources */,
+				B57DBF0E2C5A240700E8F182 /* InstrumentAddingView.swift in Sources */,
+				B5A9F61C2C5A79F600EFD035 /* InstrumentSelectButton.swift in Sources */,
 				B57DBF022C54D5A500E8F182 /* CoreDataManager.swift in Sources */,
+				B5A9F63E2C5BC11400EFD035 /* playButtonStyle.swift in Sources */,
 				AFB83FA92C5C76DA00E48896 /* SetupMonitoredSoundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,11 +549,12 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = PAPTDHH68K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "연주 소리를 입력 받기 위해 마이크 권한이 필요합니다.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -534,11 +577,12 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
-				DEVELOPMENT_TEAM = ZWTS2P7AH7;
+				DEVELOPMENT_TEAM = PAPTDHH68K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "연주 소리를 입력 받기 위해 마이크 권한이 필요합니다.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

@@ -12,10 +12,9 @@ import SwiftUI
 struct DetectSoundsView: View {
     
     @ObservedObject var state: AppState
+    @State private var showPopover = false
     @Binding var config: AppConfiguration
     @Binding var path: NavigationPath
-    @State private var showPopover = false
-
     
     static func generateMeter(confidence: Double, width: CGFloat, height: CGFloat) -> some View {
         GeometryReader { geometry in
@@ -39,7 +38,6 @@ struct DetectSoundsView: View {
         .frame(width: width, height: height)
         .animation(.easeInOut, value: confidence)
     }
-
     
     static func generateDetectionsGrid(_ detections: [(SoundIdentifier, DetectionState)]) -> some View {
         return HStack(spacing: 20){
@@ -50,24 +48,15 @@ struct DetectSoundsView: View {
     }
 
     var body: some View {
-        
         VStack{
-        
             ZStack {
-                
                 Color.black
-                
                 VStack{
-                    
                     DetectSoundsView
                         .generateDetectionsGrid(state.detectionStates)
-                    
                 }
                 .padding(.vertical, 92)
-                
             }
-            
-            
         }
         .overlay(alignment: .bottomLeading){
             Image(systemName: "gearshape")
@@ -89,7 +78,6 @@ struct DetectSoundsView: View {
                 HStack{
                     Image(systemName: "chevron.left")
                     Text("곡 제목 / ")
-
                 }
                 .font(.title2)
                 .fontWeight(.regular)
@@ -99,7 +87,5 @@ struct DetectSoundsView: View {
                 }
             }
         }
-
     }
-    
 }
