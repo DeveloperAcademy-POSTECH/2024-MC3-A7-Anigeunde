@@ -28,8 +28,8 @@ struct BandSettingView: View {
                 Spacer()
                 
                 if let selectedSong = songViewModel.selectedSong {
-                    ForEach(selectedSong.instruments) { instrument in
-                        InstrumentReady(instrument: instrument)
+                    ForEach(selectedSong.instruments.sorted { $0.type.order < $1.type.order }) { instrument in
+                        InstrumentReady(instrument: instrument.type)
                     }
                 } else {
                     Text("곡을 추가해주세요.")
