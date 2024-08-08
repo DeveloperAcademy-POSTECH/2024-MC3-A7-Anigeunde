@@ -19,13 +19,14 @@ struct LvlanceApp: App {
             if hasSeenOnboarding {
                 BandSettingView()
                     .preferredColorScheme(.dark)
-                    .environmentObject(audioManager)
-            } else{
+                    
+            } else {
                 OnboardingView(hasSeenOnboarding: $hasSeenOnboarding)
                     .preferredColorScheme(.dark)
                     .fixedSize(horizontal: true, vertical: true)
             }
         }
+        .environmentObject(audioManager)
         .windowResizability(!hasSeenOnboarding ? .contentSize : .automatic)
     }
 }
