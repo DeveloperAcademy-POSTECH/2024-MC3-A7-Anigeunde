@@ -50,7 +50,7 @@ struct OnboardingView: View {
                     }
                 )
             default:
-                ContentView()
+                BandSettingView()
             }
         }
     }
