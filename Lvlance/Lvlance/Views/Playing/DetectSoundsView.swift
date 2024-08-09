@@ -16,7 +16,7 @@ struct DetectSoundsView: View {
     @Binding var config: AppConfiguration
     @Binding var path: NavigationPath
     
-    static func generateMeter(confidence: Double, width: CGFloat, height: CGFloat) -> some View {
+    static func generateMeter(confidence: Double, width: CGFloat, height: CGFloat, varientSize: Double) -> some View {
         GeometryReader { geometry in
             let gradient = LinearGradient(
                 gradient: Gradient(colors: [.barGradientPurple, .barGradientLightPurple, .barGradientBlue]),
@@ -30,7 +30,7 @@ struct DetectSoundsView: View {
                 gradient
                     .mask(
                         Rectangle()
-                            .frame(height: geometry.size.height * CGFloat(confidence))
+                            .frame(height: geometry.size.height * CGFloat(confidence) * varientSize)
                             .frame(height: geometry.size.height, alignment: .bottom)
                     )
             }
