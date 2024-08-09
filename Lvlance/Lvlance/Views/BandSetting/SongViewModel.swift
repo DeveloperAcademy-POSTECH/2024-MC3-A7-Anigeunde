@@ -18,8 +18,15 @@ class SongViewModel: ObservableObject {
     }
     
     func setupSongs() {
-        songs = coreDataManager.getAllSongs()
-        selectedSong = songs.first
+        DispatchQueue.global(qos: .userInitiated).async {
+            let fetchedSongs = self.coreDataManager.getAllSongs()
+            DispatchQueue.main.async {
+                self.songs = fetchedSongs
+                if self.selectedSong == nil {
+                    self.selectedSong = fetchedSongs.first
+                }
+            }
+        }
     }
     
     func createSong(selectedInstruments: [Instrument]) {
