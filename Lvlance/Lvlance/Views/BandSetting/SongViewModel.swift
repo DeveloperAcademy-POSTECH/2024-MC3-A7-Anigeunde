@@ -49,13 +49,10 @@ class SongViewModel: ObservableObject {
         }
     }
     
-    func updateSongTitle(song: Song, title: String) {
-        guard let selectedSong = selectedSong else { return }
-        
-        if selectedSong.title != title {
-            coreDataManager.updateSongEntity(song: song, title: title)
-            songs = coreDataManager.getAllSongs()
-            self.selectedSong?.title = title
+    func updateSongTitle(song: Song, newTitle: String) {
+        if let index = songs.firstIndex(where: { $0.id == song.id }) {
+            songs[index].title = newTitle
+            coreDataManager.updateSongEntity(song: song, title: newTitle)
         }
     }
     
