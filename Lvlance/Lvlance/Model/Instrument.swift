@@ -8,87 +8,121 @@
 import Foundation
 
 enum InstrumentType: String, CaseIterable {
-    case vocal
-    case keyboard
-    case bass
-    case electric
-    case drum
-    
+    case vocal // order 0
+    case keyboard // order 1
+    case electric // order 2
+    case drum // order 3
+    case bass // order 4
+
     var soundLabel: String {
         switch self {
         case .vocal:
-            "singing"
+            return "singing"
         case .keyboard:
-            "electric_piano"
-        case .bass:
-            "bass_guitar"
+            return "electric_piano"
         case .electric:
-            "electric_guitar"
+            return "electric_guitar"
         case .drum:
-            "drum"
+            return "drum"
+        case .bass:
+            return "bass_guitar"
         }
     }
-    
+
     var krName: String {
         switch self {
         case .vocal:
-            "보컬"
+            return "보컬"
         case .keyboard:
-            "키보드"
-        case .bass:
-            "베이스"
+            return "키보드"
         case .electric:
-            "일렉"
+            return "일렉"
         case .drum:
-            "드럼"
+            return "드럼"
+        case .bass:
+            return "베이스"
         }
     }
-    
+
     var order: Int {
         switch self {
         case .vocal:
-            0
+            return 0
         case .keyboard:
-            1
-        case .bass:
-            2
+            return 1
         case .electric:
-            3
+            return 2
         case .drum:
-            4
+            return 3
+        case .bass:
+            return 4
         }
     }
-    
+
     var maskImage: String {
         switch self {
         case .vocal:
-            "mask_singing"
+            return "mask_singing"
         case .keyboard:
-            "mask_electric_piano"
-        case .bass:
-            "mask_bass_guitar"
+            return "mask_electric_piano"
         case .electric:
-            "mask_electric_guitar"
+            return "mask_electric_guitar"
         case .drum:
-            "mask_drum"
+            return "mask_drum"
+        case .bass:
+            return "mask_bass_guitar"
         }
     }
-    
+
     var outlineImage: String {
         switch self {
         case .vocal:
-            "outline_singing"
+            return "outline_singing"
         case .keyboard:
-            "outline_electric_piano"
-        case .bass:
-            "outline_bass_guitar"
+            return "outline_electric_piano"
         case .electric:
-            "outline_electric_guitar"
+            return "outline_electric_guitar"
         case .drum:
-            "outline_drum"
+            return "outline_drum"
+        case .bass:
+            return "outline_bass_guitar"
         }
     }
+    
+    var defaultDetectionState: DetectionState {
+            switch self {
+            case .vocal:
+                return DetectionState(presenceThreshold: 0.3, absenceThreshold: 0.15, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 30)
+            case .keyboard:
+                return DetectionState(presenceThreshold: 0.05, absenceThreshold: 0.02, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 27)
+            case .bass:
+                return DetectionState(presenceThreshold: 0.32, absenceThreshold: 0.2, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 30)
+            case .electric:
+                return DetectionState(presenceThreshold: 0.34, absenceThreshold: 0.23, presenceMeasurementsToStartDetection: 3, absenceMeasurementsToEndDetection: 30)
+            case .drum:
+                return DetectionState(presenceThreshold: 0.18, absenceThreshold: 0.1, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 30)
+            }
+        }
+    
+    var varientSize : Double {
+        switch self {
+        case .vocal:
+            return 1.3
+        case .keyboard:
+            return 2.1
+        case .bass:
+            return 1.3
+        case .electric:
+            return 1.2
+        case .drum:
+            return 1.5
+        }
+    }
+        
+    
+    
 }
+
 
 struct Instrument: Identifiable, Hashable {
     let id = UUID()

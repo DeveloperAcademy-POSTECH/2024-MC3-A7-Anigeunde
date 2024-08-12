@@ -116,6 +116,7 @@ struct SideBarView: View {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(AngularGradient(gradient: Gradient(colors: [.gradientBlue, .gradientPurple]), center: .center), lineWidth: 1)
         )
+        .shadow(color: .gradientPurple.opacity(0.2), radius: 10)
     }
 }
 

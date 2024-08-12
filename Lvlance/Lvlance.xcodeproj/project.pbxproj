@@ -27,7 +27,6 @@
 		B57DBF022C54D5A500E8F182 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF012C54D5A500E8F182 /* CoreDataManager.swift */; };
 		B57DBF0E2C5A240700E8F182 /* InstrumentAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBF0D2C5A240700E8F182 /* InstrumentAddingView.swift */; };
 		B59724B42C4909CD0027990A /* LvlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B32C4909CD0027990A /* LvlanceApp.swift */; };
-		B59724B62C4909CD0027990A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59724B52C4909CD0027990A /* ContentView.swift */; };
 		B59724B82C4909CF0027990A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724B72C4909CF0027990A /* Assets.xcassets */; };
 		B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59724BA2C4909CF0027990A /* Preview Assets.xcassets */; };
 		B59ACF772C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59ACF732C634B73003FC9D8 /* InstrumentEntity+CoreDataClass.swift */; };
@@ -71,7 +70,6 @@
 		B57DBF0D2C5A240700E8F182 /* InstrumentAddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentAddingView.swift; sourceTree = "<group>"; };
 		B59724B02C4909CD0027990A /* Lvlance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lvlance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59724B32C4909CD0027990A /* LvlanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LvlanceApp.swift; sourceTree = "<group>"; };
-		B59724B52C4909CD0027990A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B59724B72C4909CF0027990A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B59724BA2C4909CF0027990A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B59724BC2C4909CF0027990A /* Lvlance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lvlance.entitlements; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 				B57DBED22C4E4D1100E8F182 /* Manager */,
 				B57DBECD2C4E4C0A00E8F182 /* Views */,
 				B57DBEDC2C4E792C00E8F182 /* Resources */,
-				B59724B52C4909CD0027990A /* ContentView.swift */,
 				B59724BC2C4909CF0027990A /* Lvlance.entitlements */,
 				B59724B92C4909CF0027990A /* Preview Content */,
 			);
@@ -399,7 +396,6 @@
 				C73C83812C5A292A001B7540 /* OnboardingView.swift in Sources */,
 				B57DBEEF2C54A50E00E8F182 /* BandSong.xcdatamodeld in Sources */,
 				B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */,
-				B59724B62C4909CD0027990A /* ContentView.swift in Sources */,
 				B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */,
 				AFB83FA82C5C76DA00E48896 /* DetectSoundsView.swift in Sources */,
 				B5A9F61F2C5B689500EFD035 /* InstrumentReady.swift in Sources */,
@@ -549,7 +545,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
-				DEVELOPMENT_TEAM = PAPTDHH68K;
+				DEVELOPMENT_TEAM = 2WSJ3W54FF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -577,7 +573,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
-				DEVELOPMENT_TEAM = PAPTDHH68K;
+				DEVELOPMENT_TEAM = 2WSJ3W54FF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
