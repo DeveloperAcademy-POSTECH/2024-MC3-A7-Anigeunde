@@ -57,7 +57,7 @@ struct SideBarView: View {
                                     .foregroundStyle(.systemPurple)
                             }
                         }
-                        .frame(maxWidth: .infinity)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .contentShape(Rectangle())
                         .onTapGesture {
                             songViewModel.selectedSong = song
