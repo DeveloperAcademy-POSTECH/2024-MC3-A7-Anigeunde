@@ -92,13 +92,13 @@ enum InstrumentType: String, CaseIterable {
     var defaultDetectionState: DetectionState {
             switch self {
             case .vocal:
-                return DetectionState(presenceThreshold: 0.3, absenceThreshold: 0.15, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 33)
+                return DetectionState(presenceThreshold: 0.3, absenceThreshold: 0.15, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 30)
             case .keyboard:
-                return DetectionState(presenceThreshold: 0.05, absenceThreshold: 0.02, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 30)
+                return DetectionState(presenceThreshold: 0.05, absenceThreshold: 0.02, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 27)
             case .bass:
-                return DetectionState(presenceThreshold: 0.35, absenceThreshold: 0.2, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 30)
+                return DetectionState(presenceThreshold: 0.32, absenceThreshold: 0.2, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 30)
             case .electric:
-                return DetectionState(presenceThreshold: 0.38, absenceThreshold: 0.3, presenceMeasurementsToStartDetection: 3, absenceMeasurementsToEndDetection: 27)
+                return DetectionState(presenceThreshold: 0.34, absenceThreshold: 0.23, presenceMeasurementsToStartDetection: 3, absenceMeasurementsToEndDetection: 30)
             case .drum:
                 return DetectionState(presenceThreshold: 0.18, absenceThreshold: 0.1, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 30)
             }
