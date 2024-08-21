@@ -31,7 +31,7 @@ struct InstrumentBar: View {
                         .frame(width: 200, height: 569)
                         .overlay{
                             DetectSoundsView
-                                .generateMeter(confidence: confidence, width: 200, height: 569)
+                                .generateMeter(confidence: confidence, width: 200, height: 569,varientSize: instrument.varientSize)
                         }
                         .mask(
                             Image(instrument.maskImage)
