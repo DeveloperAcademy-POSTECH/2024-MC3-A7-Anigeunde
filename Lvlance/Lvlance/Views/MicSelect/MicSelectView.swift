@@ -41,7 +41,7 @@ struct MicSelectView: View {
                 //마이크 설정 저장
                 isShowingMicrophoneSelector = false
             }) {
-                Text("곡 선택하기")
+                Text("마이크 선택하기")
                     .multilineTextAlignment(.center)
                     .frame(width: 212, height: 24)
                     .cornerRadius(6)
