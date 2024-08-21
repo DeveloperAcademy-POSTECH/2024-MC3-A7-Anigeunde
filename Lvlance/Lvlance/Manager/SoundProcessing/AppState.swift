@@ -18,7 +18,7 @@ class AppState: ObservableObject {
     private var appConfig = AppConfiguration()
 
     
-    func restartDetection(config: AppConfiguration) {
+    func restartDetection(config: AppConfiguration, completion: (() -> Void)? = nil) {
         
         SystemAudioClassifier.singleton.stopSoundClassification()
 
@@ -44,6 +44,8 @@ class AppState: ObservableObject {
           subject: classificationSubject,
           inferenceWindowSize: config.inferenceWindowSize,
           overlapFactor: config.overlapFactor)
+        
+        completion?()
     }
     
     static func advanceDetectionStates(_ oldStates: [(SoundIdentifier, DetectionState)],
