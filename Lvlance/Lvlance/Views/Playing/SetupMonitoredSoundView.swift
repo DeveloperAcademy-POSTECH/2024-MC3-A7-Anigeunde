@@ -36,7 +36,7 @@ struct SetupMonitoredSoundsView: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 100, height: 100)
-                                Text(instrument.krName)
+                                Text(instrument.title)
                                 Spacer()
                                 if selectedInstruments.contains(instrument) {
                                     Image(systemName: "checkmark.circle.fill")

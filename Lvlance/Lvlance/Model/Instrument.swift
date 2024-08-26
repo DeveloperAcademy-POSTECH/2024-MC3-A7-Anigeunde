@@ -29,7 +29,7 @@ enum InstrumentType: String, CaseIterable {
         }
     }
 
-    var krName: String {
+    var title: LocalizedStringResource {
         switch self {
         case .vocal:
             return "보컬"

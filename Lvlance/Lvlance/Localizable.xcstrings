@@ -189,12 +189,22 @@
         }
       }
     },
+    "드럼" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drum"
+          }
+        }
+      }
+    },
     "마이크 선택하기" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Select mic"
+            "value" : "Select Mic"
           }
         }
       }
@@ -205,6 +215,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Choose a device to input the entire sound of the band. (Recommended device: iPhone)"
+          }
+        }
+      }
+    },
+    "베이스" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bass"
+          }
+        }
+      }
+    },
+    "보컬" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vocal"
           }
         }
       }
@@ -279,6 +309,16 @@
         }
       }
     },
+    "일렉" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guitar"
+          }
+        }
+      }
+    },
     "입력 기기 선택하기" : {
       "localizations" : {
         "en" : {
@@ -335,6 +375,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "키보드" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keyboard"
           }
         }
       }
