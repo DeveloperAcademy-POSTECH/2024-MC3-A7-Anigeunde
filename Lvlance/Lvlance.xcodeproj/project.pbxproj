@@ -13,6 +13,7 @@
 		AF11F9EF2C57DE7F0009E685 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9EE2C57DE7F0009E685 /* AppConfiguration.swift */; };
 		AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9F02C57E2300009E685 /* SystemAudioClassifier.swift */; };
 		AF11F9F32C587C4D0009E685 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9F22C587C4D0009E685 /* AppState.swift */; };
+		AF88FB762C7C1A5700172A1E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AF88FB752C7C1A5700172A1E /* Localizable.xcstrings */; };
 		AFB83FA02C5C6D2700E48896 /* AudioInputLevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83F9F2C5C6D2700E48896 /* AudioInputLevelManager.swift */; };
 		AFB83FA82C5C76DA00E48896 /* DetectSoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA32C5C76DA00E48896 /* DetectSoundsView.swift */; };
 		AFB83FA92C5C76DA00E48896 /* SetupMonitoredSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA42C5C76DA00E48896 /* SetupMonitoredSoundView.swift */; };
@@ -51,6 +52,7 @@
 		AF11F9EE2C57DE7F0009E685 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		AF11F9F02C57E2300009E685 /* SystemAudioClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAudioClassifier.swift; sourceTree = "<group>"; };
 		AF11F9F22C587C4D0009E685 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		AF88FB752C7C1A5700172A1E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		AFB83F9F2C5C6D2700E48896 /* AudioInputLevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputLevelManager.swift; sourceTree = "<group>"; };
 		AFB83FA32C5C76DA00E48896 /* DetectSoundsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectSoundsView.swift; sourceTree = "<group>"; };
 		AFB83FA42C5C76DA00E48896 /* SetupMonitoredSoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMonitoredSoundView.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		B59724B22C4909CD0027990A /* Lvlance */ = {
 			isa = PBXGroup;
 			children = (
+				AF88FB752C7C1A5700172A1E /* Localizable.xcstrings */,
 				B59724B32C4909CD0027990A /* LvlanceApp.swift */,
 				B57DBEF82C54C20400E8F182 /* Data */,
 				B57DBECB2C4E4BD700E8F182 /* Model */,
@@ -345,11 +348,12 @@
 			};
 			buildConfigurationList = B59724AB2C4909CD0027990A /* Build configuration list for PBXProject "Lvlance" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = B59724A72C4909CD0027990A;
 			productRefGroup = B59724B12C4909CD0027990A /* Products */;
@@ -368,6 +372,7 @@
 			files = (
 				B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */,
 				B59724B82C4909CF0027990A /* Assets.xcassets in Resources */,
+				AF88FB762C7C1A5700172A1E /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
