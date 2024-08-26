@@ -1,0 +1,354 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    "" : {
+
+    },
+    "%@" : {
+
+    },
+    "onboarding.button.complete" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Complete"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "완료 "
+          }
+        }
+      }
+    },
+    "onboarding.button.next" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음"
+          }
+        }
+      }
+    },
+    "onboarding.step1.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Place the iPhone in front of the speaker facing the audience to capture the full sound of the band"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "밴드의 전체 소리를 입력할 iPhone을 관객 쪽을 향하는 스피커의 앞에 둡니다."
+          }
+        }
+      }
+    },
+    "onboarding.step2.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connect the iPhone to the MacBook with a cable to capture the full sound of the band"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "밴드의 전체 소리를 입력할 iPhone을 macBook에 선으로 연결합니다."
+          }
+        }
+      }
+    },
+    "onboarding.step3.description1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lvlance is an app that allows performers to visually monitor the full sound of the band as heard by the audience during a performance "
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lvlance는 밴드 연주 중, 관객에게 들리는 밴드의 전체 소리를 연주자가 시각적으로 알 수 있는 앱입니다"
+          }
+        }
+      }
+    },
+    "onboarding.step3.description2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Connect your input device now and start using Lvlance!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금 바로 입력 기기를 연결하여 Lvlance를 사용해 보세요!"
+          }
+        }
+      }
+    },
+    "건너뛰기" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip"
+          }
+        }
+      }
+    },
+    "곡 삭제하기" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete song"
+          }
+        }
+      }
+    },
+    "곡 선택하기" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select song"
+          }
+        }
+      }
+    },
+    "곡 제목 / " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Song title /"
+          }
+        }
+      }
+    },
+    "곡 추가하기" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add song"
+          }
+        }
+      }
+    },
+    "곡명 변경하기" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit song title "
+          }
+        }
+      }
+    },
+    "곡을 추가해주세요." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add new song "
+          }
+        }
+      }
+    },
+    "뒤로" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        }
+      }
+    },
+    "마이크 선택하기" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select mic"
+          }
+        }
+      }
+    },
+    "밴드의 전체 소리를 입력할 기기를 선택해주세요. (권장 기기: iPhone)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose a device to input the entire sound of the band. (Recommended device: iPhone)"
+          }
+        }
+      }
+    },
+    "선택" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select"
+          }
+        }
+      }
+    },
+    "선택하신 디바이스가 밴드의 연주 소리를 입력합니다." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The device you've selected will input the sound of the band's performance."
+          }
+        }
+      }
+    },
+    "악기 편집하기" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Instruments"
+          }
+        }
+      }
+    },
+    "완료" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Complete "
+          }
+        }
+      }
+    },
+    "원하는 위치에 입력 기기를 놓아주세요." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Place the input device in the desired location"
+          }
+        }
+      }
+    },
+    "이 곡에서 연주할 악기를 선택해주세요." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please select the instruments to be played in this song"
+          }
+        }
+      }
+    },
+    "이 기기가 입력한 밴드의 소리는 악기별로 분류되어 앱 내에 반영됩니다." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The band's sound input by this device will be classified by instrument and reflected in the app"
+          }
+        }
+      }
+    },
+    "입력 기기 선택하기" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select Input Device"
+          }
+        }
+      }
+    },
+    "입력 기기 설정을 할 필요가 없는 경우, 건너뛰기하세요" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you don't need to set up an input device, skip this step"
+          }
+        }
+      }
+    },
+    "입력 레벨" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Input Level"
+          }
+        }
+      }
+    },
+    "재생 버튼을 눌러 연주를 시작하세요" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press the play button to start playing"
+          }
+        }
+      }
+    },
+    "전체 입력 레벨을 조절해보세요." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adjust the overall input level"
+          }
+        }
+      }
+    },
+    "취소" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "탐지할 악기 선택" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select the instrument to detect"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
