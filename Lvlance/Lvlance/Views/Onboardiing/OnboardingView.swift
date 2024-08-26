@@ -53,5 +53,6 @@ struct OnboardingView: View {
                 BandSettingView()
             }
         }
+        .frame(width: 777, height: 507)
     }
 }
