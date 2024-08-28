@@ -23,7 +23,6 @@ struct BandSettingView: View {
         NavigationStack(path: $path) {
             HStack {
                 SideBarView(songViewModel: songViewModel, isAddingPresented: $isAddingPresented, isEditingPresented: $isEditingPresented, appState: appState, appConfig: $appConfig, path: $path)
-                    .padding(.leading, 20)
                 
                 Spacer()
                 
@@ -35,7 +34,6 @@ struct BandSettingView: View {
                     Text("곡을 추가해주세요.")
                         .font(.system(size: 23).bold())
                         .foregroundStyle(.white)
-                        .padding(.horizontal, 500)
                 }
                 Spacer()
             }
@@ -45,7 +43,8 @@ struct BandSettingView: View {
                 }
             }
         }
-        .frame(width: 1510, height: 834)
+        .padding(EdgeInsets(top: 50, leading: 20, bottom: 80, trailing: 64))
+        .frame(minWidth: 1510, minHeight: 834)
         .sheet(isPresented: $isShowingMicrophoneSelector, content: {
             MicSelectView(isShowingMicrophoneSelector: $isShowingMicrophoneSelector)
         })
