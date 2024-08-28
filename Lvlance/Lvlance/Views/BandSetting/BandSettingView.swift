@@ -23,7 +23,7 @@ struct BandSettingView: View {
         NavigationStack(path: $path) {
             HStack {
                 SideBarView(songViewModel: songViewModel, isAddingPresented: $isAddingPresented, isEditingPresented: $isEditingPresented, appState: appState, appConfig: $appConfig, path: $path)
-                
+                    .padding(EdgeInsets(top: 50, leading: 20, bottom: 80, trailing: 0))
                 Spacer()
                 
                 if let selectedSong = songViewModel.selectedSong {
@@ -43,7 +43,6 @@ struct BandSettingView: View {
                 }
             }
         }
-        .padding(EdgeInsets(top: 50, leading: 20, bottom: 80, trailing: 64))
         .frame(minWidth: 1510, minHeight: 834)
         .sheet(isPresented: $isShowingMicrophoneSelector, content: {
             MicSelectView(isShowingMicrophoneSelector: $isShowingMicrophoneSelector)
