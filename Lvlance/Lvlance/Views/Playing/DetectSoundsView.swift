@@ -63,8 +63,6 @@ struct DetectSoundsView: View {
                 
             }
         }
-        
-        
         .overlay(alignment: .bottomLeading){
             Image(systemName: "gearshape")
                 .font(.system(size: 30))
@@ -84,22 +82,6 @@ struct DetectSoundsView: View {
                         }
                     }
                 }
-        }
-        .ignoresSafeArea(.all)
-        .navigationBarBackButtonHidden(true)
-        .toolbar{
-            ToolbarItem(placement: .navigation) {
-                HStack{
-                    Image(systemName: "chevron.left")
-                    Text("곡 제목 / ")
-                }
-                .font(.title2)
-                .fontWeight(.regular)
-                .padding(.vertical)
-                .onTapGesture {
-                    path.removeLast()
-                }
-            }
         }
     }
 }
