@@ -101,5 +101,8 @@ struct DetectSoundsView: View {
                 }
             }
         }
+        .onDisappear{
+            SystemAudioClassifier.singleton.stopSoundClassification()
+        }
     }
 }
