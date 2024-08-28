@@ -56,7 +56,6 @@ class CoreDataManager {
     
     func getSongCounts() -> Int {
         let request = SongEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "title BEGINSWITH '새 노래'")
         
         do {
             let count = try context.count(for: request)
@@ -73,7 +72,7 @@ class CoreDataManager {
         newSong.date = Date()
         
         let songCount = getSongCounts()
-        newSong.title = "새 노래 \(songCount + 1)"
+        newSong.title = "새 노래 \(songCount)"
         
         for instrument in instruments {
             let newInstrument = InstrumentEntity(context: context)

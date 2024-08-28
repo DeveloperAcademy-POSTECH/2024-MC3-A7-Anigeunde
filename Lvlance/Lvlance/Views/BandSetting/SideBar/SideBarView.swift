@@ -18,6 +18,9 @@ struct SideBarView: View {
     @Binding var appConfig: AppConfiguration
     @Binding var path: NavigationPath
     
+    @State private var editingSongId: UUID?
+    @State private var editingTitle: String = ""
+    
     var body: some View {
         VStack(alignment: .trailing ,spacing: 0) {
             Spacer().frame(height: 46)
@@ -46,21 +49,47 @@ struct SideBarView: View {
             List {
                 Section(isExpanded: $isSectionExpanded) {
                     ForEach(songViewModel.songs) { song in
-                        Label {
-                            Text(song.title)
-                        } icon: {
-                            if song.id == songViewModel.selectedSong?.id {
-                                Image(systemName: "checkmark")
-                                    .foregroundStyle(Color.white)
+                        Group {
+                            if editingSongId == song.id {
+                                TextField("곡 제목", text: $editingTitle)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .submitLabel(.done)
+                                    .onSubmit {
+                                        saveSongTitle(song: song)
+                                    }
                             } else {
-                                Image(systemName: "music.note")
-                                    .foregroundStyle(.systemPurple)
+                                Label {
+                                    Text(song.title)
+                                } icon: {
+                                    if song.id == songViewModel.selectedSong?.id {
+                                        Image(systemName: "checkmark")
+                                            .foregroundStyle(Color.white)
+                                    } else {
+                                        Image(systemName: "music.note")
+                                            .foregroundStyle(.systemPurple)
+                                    }
+                                }
                             }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .contentShape(Rectangle())
                         .onTapGesture {
-                            songViewModel.selectedSong = song
+    
+                            if editingSongId == song.id {
+                                saveSongTitle(song: song)
+                            } else {
+                                selectSong(song)
+                            }
+                            
+                        }
+                        .contextMenu{
+                            Button("곡명 변경하기") {
+                                editingSongId = song.id
+                                editingTitle = song.title
+                            }
+                            Button("곡 삭제하기") {
+                                songViewModel.deleteSong(song: song)
+                            }
                         }
                         .listRowBackground(song.id == songViewModel.selectedSong?.id ? Color.accentColor.opacity(0.6) : Color.sidebarFrameBackground)
                     }
@@ -70,19 +99,16 @@ struct SideBarView: View {
                         .padding(.bottom, 7)
                 }
             }
+            .background(
+                Color.clear
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        cancelEditing()
+                    }
+            )
             .scrollContentBackground(.hidden)
             .listStyle(SidebarListStyle())
             .frame(minHeight: 28, maxHeight: 449)
-            .contextMenu{
-                Button("곡명 변경하기") {
-                   //TODO: 곡명 변경 만들기
-                }
-                Button("곡 삭제하기") {
-                    if let selectedSong = songViewModel.selectedSong {
-                        songViewModel.deleteSong(song: selectedSong)
-                    }
-                }
-            }
             
             Spacer().frame(height: 30)
             
@@ -117,6 +143,31 @@ struct SideBarView: View {
                 .stroke(AngularGradient(gradient: Gradient(colors: [.gradientBlue, .gradientPurple]), center: .center), lineWidth: 1)
         )
         .shadow(color: .gradientPurple.opacity(0.2), radius: 10)
+    }
+    
+    private func saveSongTitle(song: Song) {
+        guard !editingTitle.isEmpty else {
+            cancelEditing()
+            return
+        }
+        
+        if editingTitle != song.title {
+            songViewModel.updateSongTitle(song: song, newTitle: editingTitle)
+        }
+        
+        cancelEditing()
+    }
+    
+    private func selectSong(_ song: Song) {
+        if editingSongId != nil {
+            cancelEditing()
+        }
+        songViewModel.selectedSong = song
+    }
+    
+    private func cancelEditing() {
+        editingSongId = nil
+        editingTitle = ""
     }
 }
 
