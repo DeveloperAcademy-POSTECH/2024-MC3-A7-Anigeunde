@@ -12,7 +12,7 @@ class SongViewModel: ObservableObject {
     
     @Published var songs: [Song] = []
     @Published var selectedSong: Song? = nil
-        
+    
     init() {
         self.setupSongs()
     }
@@ -22,9 +22,7 @@ class SongViewModel: ObservableObject {
             let fetchedSongs = self.coreDataManager.getAllSongs()
             DispatchQueue.main.async {
                 self.songs = fetchedSongs
-                if self.selectedSong == nil {
-                    self.selectedSong = fetchedSongs.first
-                }
+                self.selectedSong = fetchedSongs.first               
             }
         }
     }
@@ -32,7 +30,7 @@ class SongViewModel: ObservableObject {
     func createSong(selectedInstruments: [Instrument]) {
         DispatchQueue.global(qos: .userInitiated).async {
             self.coreDataManager.createSongEntity(instruments: selectedInstruments)
-
+            
             DispatchQueue.main.async {
                 self.setupSongs()
             }

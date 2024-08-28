@@ -48,7 +48,8 @@ struct InstrumentAddingView: View {
                             songViewModel.updateInstrument(song: selectedSong, selectedInstruments: selectedInstrumentsType.map{ Instrument(type: $0) })
                         }
                     } else {
-                        songViewModel.createSong(selectedInstruments: selectedInstrumentsType.map{ Instrument(type: $0) })
+                        songViewModel.createSong(selectedInstruments: selectedInstrumentsType.map { Instrument(type: $0) })
+                        songViewModel.setupSongs()
                     }
                     isSheetPresented = false
                 } label: {
