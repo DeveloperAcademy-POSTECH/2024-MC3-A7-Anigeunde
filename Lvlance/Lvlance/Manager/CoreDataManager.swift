@@ -133,6 +133,7 @@ class CoreDataManager {
         if let instruments = instruments {
             for instrument in instruments {
                 let newInstrument = InstrumentEntity(context: context)
+                newInstrument.instrumentId = instrument.id
                 newInstrument.type = instrument.type.rawValue
                 entity?.addToInstruments(newInstrument)
             }
