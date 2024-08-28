@@ -76,6 +76,7 @@ class CoreDataManager {
         
         for instrument in instruments {
             let newInstrument = InstrumentEntity(context: context)
+            newInstrument.instrumentId = instrument.id
             newInstrument.type = instrument.type.rawValue
             newSong.addToInstruments(newInstrument)
         }
