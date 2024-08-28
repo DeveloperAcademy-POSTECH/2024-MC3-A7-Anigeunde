@@ -16,6 +16,7 @@ struct DetectSoundsView: View {
     @Binding var config: AppConfiguration
     @Binding var path: NavigationPath
     @State private var isLoading = false
+    var songTitle: String 
     
     static func generateMeter(confidence: Double, width: CGFloat, height: CGFloat, varientSize: Double) -> some View {
         GeometryReader { geometry in
@@ -82,6 +83,13 @@ struct DetectSoundsView: View {
                         }
                     }
                 }
+        }
+        .overlay(alignment: .topLeading){
+            Text(songTitle)
+                .font(.system(size: 18))
+                .fontWeight(.semibold)
+                .padding(.leading, 60)
+                .padding(.top, 60)
         }
     }
 }
