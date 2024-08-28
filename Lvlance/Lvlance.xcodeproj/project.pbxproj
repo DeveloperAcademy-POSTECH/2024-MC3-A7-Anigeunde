@@ -13,11 +13,13 @@
 		AF11F9EF2C57DE7F0009E685 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9EE2C57DE7F0009E685 /* AppConfiguration.swift */; };
 		AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9F02C57E2300009E685 /* SystemAudioClassifier.swift */; };
 		AF11F9F32C587C4D0009E685 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11F9F22C587C4D0009E685 /* AppState.swift */; };
+		AF88FB762C7C1A5700172A1E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AF88FB752C7C1A5700172A1E /* Localizable.xcstrings */; };
 		AFB83FA02C5C6D2700E48896 /* AudioInputLevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83F9F2C5C6D2700E48896 /* AudioInputLevelManager.swift */; };
 		AFB83FA82C5C76DA00E48896 /* DetectSoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA32C5C76DA00E48896 /* DetectSoundsView.swift */; };
 		AFB83FA92C5C76DA00E48896 /* SetupMonitoredSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA42C5C76DA00E48896 /* SetupMonitoredSoundView.swift */; };
 		AFB83FAA2C5C76DA00E48896 /* InstrumentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA52C5C76DA00E48896 /* InstrumentBar.swift */; };
 		AFB83FAB2C5C76DA00E48896 /* SettingPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA62C5C76DA00E48896 /* SettingPopoverView.swift */; };
+		AFF48AD02C7EE31C005D45D9 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AFF48ACF2C7EE31C005D45D9 /* InfoPlist.xcstrings */; };
 		B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED42C4E78D600E8F182 /* MicSelectView.swift */; };
 		B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED62C4E78E400E8F182 /* BandSettingView.swift */; };
 		B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED82C4E78FF00E8F182 /* SideBarView.swift */; };
@@ -51,11 +53,13 @@
 		AF11F9EE2C57DE7F0009E685 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		AF11F9F02C57E2300009E685 /* SystemAudioClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAudioClassifier.swift; sourceTree = "<group>"; };
 		AF11F9F22C587C4D0009E685 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		AF88FB752C7C1A5700172A1E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		AFB83F9F2C5C6D2700E48896 /* AudioInputLevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputLevelManager.swift; sourceTree = "<group>"; };
 		AFB83FA32C5C76DA00E48896 /* DetectSoundsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectSoundsView.swift; sourceTree = "<group>"; };
 		AFB83FA42C5C76DA00E48896 /* SetupMonitoredSoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMonitoredSoundView.swift; sourceTree = "<group>"; };
 		AFB83FA52C5C76DA00E48896 /* InstrumentBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentBar.swift; sourceTree = "<group>"; };
 		AFB83FA62C5C76DA00E48896 /* SettingPopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPopoverView.swift; sourceTree = "<group>"; };
+		AFF48ACF2C7EE31C005D45D9 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		B57DBED42C4E78D600E8F182 /* MicSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicSelectView.swift; sourceTree = "<group>"; };
 		B57DBED62C4E78E400E8F182 /* BandSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandSettingView.swift; sourceTree = "<group>"; };
 		B57DBED82C4E78FF00E8F182 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 		B59724B22C4909CD0027990A /* Lvlance */ = {
 			isa = PBXGroup;
 			children = (
+				AFF48ACF2C7EE31C005D45D9 /* InfoPlist.xcstrings */,
+				AF88FB752C7C1A5700172A1E /* Localizable.xcstrings */,
 				B59724B32C4909CD0027990A /* LvlanceApp.swift */,
 				B57DBEF82C54C20400E8F182 /* Data */,
 				B57DBECB2C4E4BD700E8F182 /* Model */,
@@ -345,11 +351,12 @@
 			};
 			buildConfigurationList = B59724AB2C4909CD0027990A /* Build configuration list for PBXProject "Lvlance" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = B59724A72C4909CD0027990A;
 			productRefGroup = B59724B12C4909CD0027990A /* Products */;
@@ -368,6 +375,8 @@
 			files = (
 				B59724BB2C4909CF0027990A /* Preview Assets.xcassets in Resources */,
 				B59724B82C4909CF0027990A /* Assets.xcassets in Resources */,
+				AFF48AD02C7EE31C005D45D9 /* InfoPlist.xcstrings in Resources */,
+				AF88FB762C7C1A5700172A1E /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,11 +554,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
-				DEVELOPMENT_TEAM = 2WSJ3W54FF;
+				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Anigeunde. All rights reserved.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "연주 소리를 입력 받기 위해 마이크 권한이 필요합니다.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -573,11 +582,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lvlance/Preview Content\"";
-				DEVELOPMENT_TEAM = 2WSJ3W54FF;
+				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Anigeunde. All rights reserved.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "연주 소리를 입력 받기 위해 마이크 권한이 필요합니다.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

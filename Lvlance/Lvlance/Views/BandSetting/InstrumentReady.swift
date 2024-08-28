@@ -12,7 +12,7 @@ struct InstrumentReady: View {
     
     var body: some View {
         VStack {
-            Text(instrument.rawValue)
+            Text(instrument.title)
                 .font(.system(size: 22))
             
             Spacer().frame(height: 92)
