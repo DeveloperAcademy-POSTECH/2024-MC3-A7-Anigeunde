@@ -39,7 +39,7 @@ struct BandSettingView: View {
             }
             .navigationDestination(for: String.self) { string in
                 if string == "playView" {
-                    DetectSoundsView(state: appState, config: $appConfig, path: $path)
+                    DetectSoundsView(state: appState, config: $appConfig, path: $path, songTitle: songViewModel.selectedSong?.title ?? "")
                 }
             }
         }
