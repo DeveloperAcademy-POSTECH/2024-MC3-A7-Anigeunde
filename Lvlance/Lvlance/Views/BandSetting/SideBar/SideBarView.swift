@@ -94,6 +94,7 @@ struct SideBarView: View {
                         }
                         .contextMenu{
                             Button("악기 편집하기") {
+                                songViewModel.editingSong = song
                                 isEditingPresented = true
                             }
                             
