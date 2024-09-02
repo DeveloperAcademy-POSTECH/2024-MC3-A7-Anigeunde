@@ -139,7 +139,11 @@
         }
       }
     },
+    "곡 제목" : {
+
+    },
     "곡 제목 / " : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

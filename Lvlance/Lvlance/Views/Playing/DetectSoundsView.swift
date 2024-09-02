@@ -16,6 +16,7 @@ struct DetectSoundsView: View {
     @Binding var config: AppConfiguration
     @Binding var path: NavigationPath
     @State private var isLoading = false
+    var songTitle: String 
     
     static func generateMeter(confidence: Double, width: CGFloat, height: CGFloat, varientSize: Double) -> some View {
         GeometryReader { geometry in
@@ -63,8 +64,6 @@ struct DetectSoundsView: View {
                 
             }
         }
-        
-        
         .overlay(alignment: .bottomLeading){
             Image(systemName: "gearshape")
                 .font(.system(size: 30))
@@ -85,21 +84,12 @@ struct DetectSoundsView: View {
                     }
                 }
         }
-        .ignoresSafeArea(.all)
-        .navigationBarBackButtonHidden(true)
-        .toolbar{
-            ToolbarItem(placement: .navigation) {
-                HStack{
-                    Image(systemName: "chevron.left")
-                    Text("곡 제목 / ")
-                }
-                .font(.title2)
-                .fontWeight(.regular)
-                .padding(.vertical)
-                .onTapGesture {
-                    path.removeLast()
-                }
-            }
+        .overlay(alignment: .topLeading){
+            Text(songTitle)
+                .font(.system(size: 18))
+                .fontWeight(.semibold)
+                .padding(.leading, 60)
+                .padding(.top, 60)
         }
     }
 }
