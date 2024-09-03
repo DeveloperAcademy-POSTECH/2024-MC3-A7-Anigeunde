@@ -26,6 +26,7 @@ struct InstrumentAddingView: View {
                     InstrumentSelectButton(selectedInstruments: $selectedInstrumentsType, instrumentType: instrumentType)
                 }
             }
+            .padding(.horizontal, 40)
             
             Spacer().frame(height: 42)
             

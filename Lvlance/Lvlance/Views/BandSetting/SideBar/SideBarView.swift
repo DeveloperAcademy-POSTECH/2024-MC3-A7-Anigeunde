@@ -93,6 +93,10 @@ struct SideBarView: View {
                             
                         }
                         .contextMenu{
+                            Button("악기 편집하기") {
+                                isEditingPresented = true
+                            }
+                            
                             Button("곡명 변경하기") {
                                 editingSongId = song.id
                                 editingTitle = song.title
@@ -132,15 +136,6 @@ struct SideBarView: View {
             .buttonStyle(sideBarButtonStyle())
             
             Spacer().frame(height: 136)
-            
-            Button {
-                isEditingPresented = true
-            } label: {
-                Text("악기 편집하기")
-                    .frame(width: 92, height: 24)
-                
-            }
-            .buttonStyle(sideBarButtonStyle())
             
             
         }

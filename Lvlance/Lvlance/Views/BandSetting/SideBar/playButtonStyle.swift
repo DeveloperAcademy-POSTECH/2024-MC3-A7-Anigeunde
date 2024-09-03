@@ -10,7 +10,7 @@ import SwiftUI
 struct playButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.system(size: 24))
+            .font(.system(size: 42))
             .foregroundStyle(.white)
             .background(.clear)
     }
