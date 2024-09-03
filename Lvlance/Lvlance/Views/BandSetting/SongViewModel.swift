@@ -12,7 +12,8 @@ class SongViewModel: ObservableObject {
     
     @Published var songs: [Song] = []
     @Published var selectedSong: Song? = nil
-        
+    @Published var editingSong: Song? = nil
+    
     init() {
         self.setupSongs()
     }
@@ -22,9 +23,7 @@ class SongViewModel: ObservableObject {
             let fetchedSongs = self.coreDataManager.getAllSongs()
             DispatchQueue.main.async {
                 self.songs = fetchedSongs
-                if self.selectedSong == nil {
-                    self.selectedSong = fetchedSongs.first
-                }
+                self.selectedSong = fetchedSongs.first               
             }
         }
     }
@@ -32,7 +31,7 @@ class SongViewModel: ObservableObject {
     func createSong(selectedInstruments: [Instrument]) {
         DispatchQueue.global(qos: .userInitiated).async {
             self.coreDataManager.createSongEntity(instruments: selectedInstruments)
-
+            
             DispatchQueue.main.async {
                 self.setupSongs()
             }
@@ -45,13 +44,19 @@ class SongViewModel: ObservableObject {
         if !(selectedSong.instruments).elementsEqual(selectedInstruments) {
             coreDataManager.updateSongEntity(song: song, instruments: selectedInstruments)
             songs = coreDataManager.getAllSongs()
-            self.selectedSong?.instruments = selectedInstruments
+            
+            if song.id == selectedSong.id {
+                self.selectedSong?.instruments = selectedInstruments
+            }
         }
     }
     
     func updateSongTitle(song: Song, newTitle: String) {
         if let index = songs.firstIndex(where: { $0.id == song.id }) {
             songs[index].title = newTitle
+            if song.id == selectedSong?.id {
+                selectedSong?.title = newTitle
+            }
             coreDataManager.updateSongEntity(song: song, title: newTitle)
         }
     }

@@ -15,6 +15,8 @@ struct DetectSoundsView: View {
     @State private var showPopover = false
     @Binding var config: AppConfiguration
     @Binding var path: NavigationPath
+    @State private var isLoading = false
+    var songTitle: String 
     
     static func generateMeter(confidence: Double, width: CGFloat, height: CGFloat, varientSize: Double) -> some View {
         GeometryReader { geometry in
@@ -48,14 +50,18 @@ struct DetectSoundsView: View {
     }
 
     var body: some View {
-        VStack{
-            ZStack {
-                Color.black
-                VStack{
-                    DetectSoundsView
-                        .generateDetectionsGrid(state.detectionStates)
-                }
-                .padding(.vertical, 92)
+        
+        ZStack {
+            Color.black
+            
+            if isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    .scaleEffect(2)
+            } else {
+                DetectSoundsView
+                    .generateDetectionsGrid(state.detectionStates)
+                
             }
         }
         .overlay(alignment: .bottomLeading){
@@ -68,24 +74,25 @@ struct DetectSoundsView: View {
                     showPopover = true
                 }
                 .popover(isPresented: $showPopover) {
-                   SettingPopoverView()
+                    SettingPopoverView {
+                        isLoading = true
+                        state.restartDetection(config: config) {
+                            DispatchQueue.main.async {
+                                isLoading = false
+                            }
+                        }
+                    }
                 }
         }
-        .ignoresSafeArea(.all)
-        .navigationBarBackButtonHidden(true)
-        .toolbar{
-            ToolbarItem(placement: .navigation) {          
-                HStack{
-                    Image(systemName: "chevron.left")
-                    Text("곡 제목 / ")
-                }
-                .font(.title2)
-                .fontWeight(.regular)
-                .padding(.vertical)
-                .onTapGesture {
-                    path.removeLast()
-                }
-            }
+        .overlay(alignment: .topLeading){
+            Text(songTitle)
+                .font(.system(size: 18))
+                .fontWeight(.semibold)
+                .padding(.leading, 60)
+                .padding(.top, 60)
+        }
+        .onDisappear{
+            SystemAudioClassifier.singleton.stopSoundClassification()
         }
     }
 }

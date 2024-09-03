@@ -15,6 +15,8 @@ struct SettingPopoverView: View {
     @State private var inputLevel: Double = 0.5
     @State private var isExpanded = false
     
+    var onMicrophoneChange: (() -> Void)?
+    
     var body: some View {
         
         VStack(alignment: .leading, spacing: 20) {
@@ -48,6 +50,7 @@ struct SettingPopoverView: View {
                                     .foregroundColor(device.id == audioManager.selectedAudioDevice.id ? .systemPurple : .white)
                                     .onTapGesture {
                                         audioManager.selectDevice(device)
+                                        onMicrophoneChange?()
                                     }
                             }
                         }

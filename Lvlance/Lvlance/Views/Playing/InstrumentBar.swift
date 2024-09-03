@@ -14,7 +14,7 @@ struct InstrumentBar: View {
     var body: some View {
         ZStack {
             VStack(spacing: 92) {
-                Text(instrument.krName)
+                Text(instrument.title)
                     .font(.system(size: 22))
                     .background{
                         if(confidence == 0){

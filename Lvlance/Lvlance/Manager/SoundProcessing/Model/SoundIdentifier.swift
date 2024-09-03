@@ -14,6 +14,6 @@ struct SoundIdentifier: Hashable {
     }
     
     var displayName: String {
-        instrument.krName
+        String(localized: instrument.title)
     }
 }

@@ -17,9 +17,12 @@ struct InstrumentSelectButton: View {
     var body: some View {
         VStack {
             Image("select_\(instrumentType.rawValue)")
+                .onTapGesture {
+                    isSelected.toggle()
+                }
             
             HStack {
-                Toggle("\(instrumentType.krName)", isOn: $isSelected)
+                Toggle("\(instrumentType.title)", isOn: $isSelected)
                     .toggleStyle(.checkbox)
                     .onChange(of: isSelected) {
                         if isSelected {

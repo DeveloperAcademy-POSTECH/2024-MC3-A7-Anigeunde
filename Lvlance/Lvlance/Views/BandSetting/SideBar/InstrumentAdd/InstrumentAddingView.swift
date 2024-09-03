@@ -26,6 +26,7 @@ struct InstrumentAddingView: View {
                     InstrumentSelectButton(selectedInstruments: $selectedInstrumentsType, instrumentType: instrumentType)
                 }
             }
+            .padding(.horizontal, 40)
             
             Spacer().frame(height: 42)
             
@@ -44,11 +45,12 @@ struct InstrumentAddingView: View {
                 
                 Button {
                     if isEdit {
-                        if let selectedSong = songViewModel.selectedSong {
-                            songViewModel.updateInstrument(song: selectedSong, selectedInstruments: selectedInstrumentsType.map{ Instrument(type: $0) })
+                        if let editingSong = songViewModel.editingSong {
+                            songViewModel.updateInstrument(song: editingSong, selectedInstruments: selectedInstrumentsType.map{ Instrument(type: $0) })
                         }
                     } else {
-                        songViewModel.createSong(selectedInstruments: selectedInstrumentsType.map{ Instrument(type: $0) })
+                        songViewModel.createSong(selectedInstruments: selectedInstrumentsType.map { Instrument(type: $0) })
+                        songViewModel.setupSongs()
                     }
                     isSheetPresented = false
                 } label: {
@@ -64,8 +66,8 @@ struct InstrumentAddingView: View {
         }
         .onAppear {
             if isEdit {
-                if let selectedSong = songViewModel.selectedSong {
-                    selectedInstrumentsType = Set(selectedSong.instruments.map { $0.type })
+                if let editingSong = songViewModel.editingSong {
+                    selectedInstrumentsType = Set(editingSong.instruments.map { $0.type })
                 }
             }
         }
