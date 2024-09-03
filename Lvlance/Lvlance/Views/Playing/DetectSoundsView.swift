@@ -91,5 +91,8 @@ struct DetectSoundsView: View {
                 .padding(.leading, 60)
                 .padding(.top, 60)
         }
+        .onDisappear{
+            SystemAudioClassifier.singleton.stopSoundClassification()
+        }
     }
 }

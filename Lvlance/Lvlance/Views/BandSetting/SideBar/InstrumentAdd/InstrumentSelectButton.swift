@@ -17,6 +17,9 @@ struct InstrumentSelectButton: View {
     var body: some View {
         VStack {
             Image("select_\(instrumentType.rawValue)")
+                .onTapGesture {
+                    isSelected.toggle()
+                }
             
             HStack {
                 Toggle("\(instrumentType.title)", isOn: $isSelected)
