@@ -12,6 +12,7 @@ class SongViewModel: ObservableObject {
     
     @Published var songs: [Song] = []
     @Published var selectedSong: Song? = nil
+    @Published var editingSong: Song? = nil
     
     init() {
         self.setupSongs()
@@ -43,7 +44,10 @@ class SongViewModel: ObservableObject {
         if !(selectedSong.instruments).elementsEqual(selectedInstruments) {
             coreDataManager.updateSongEntity(song: song, instruments: selectedInstruments)
             songs = coreDataManager.getAllSongs()
-            self.selectedSong?.instruments = selectedInstruments
+            
+            if song.id == selectedSong.id {
+                self.selectedSong?.instruments = selectedInstruments
+            }
         }
     }
     
