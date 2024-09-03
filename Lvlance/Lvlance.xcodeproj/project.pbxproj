@@ -20,6 +20,7 @@
 		AFB83FAA2C5C76DA00E48896 /* InstrumentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA52C5C76DA00E48896 /* InstrumentBar.swift */; };
 		AFB83FAB2C5C76DA00E48896 /* SettingPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB83FA62C5C76DA00E48896 /* SettingPopoverView.swift */; };
 		AFF48AD02C7EE31C005D45D9 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AFF48ACF2C7EE31C005D45D9 /* InfoPlist.xcstrings */; };
+		AFF48BD02C874105005D45D9 /* QuitPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF48BCF2C874105005D45D9 /* QuitPopoverView.swift */; };
 		B57DBED52C4E78D600E8F182 /* MicSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED42C4E78D600E8F182 /* MicSelectView.swift */; };
 		B57DBED72C4E78E400E8F182 /* BandSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED62C4E78E400E8F182 /* BandSettingView.swift */; };
 		B57DBED92C4E78FF00E8F182 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DBED82C4E78FF00E8F182 /* SideBarView.swift */; };
@@ -60,6 +61,7 @@
 		AFB83FA52C5C76DA00E48896 /* InstrumentBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentBar.swift; sourceTree = "<group>"; };
 		AFB83FA62C5C76DA00E48896 /* SettingPopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPopoverView.swift; sourceTree = "<group>"; };
 		AFF48ACF2C7EE31C005D45D9 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		AFF48BCF2C874105005D45D9 /* QuitPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitPopoverView.swift; sourceTree = "<group>"; };
 		B57DBED42C4E78D600E8F182 /* MicSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicSelectView.swift; sourceTree = "<group>"; };
 		B57DBED62C4E78E400E8F182 /* BandSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandSettingView.swift; sourceTree = "<group>"; };
 		B57DBED82C4E78FF00E8F182 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				AFB83FA52C5C76DA00E48896 /* InstrumentBar.swift */,
 				AFB83FA62C5C76DA00E48896 /* SettingPopoverView.swift */,
 				AFB83FA42C5C76DA00E48896 /* SetupMonitoredSoundView.swift */,
+				AFF48BCF2C874105005D45D9 /* QuitPopoverView.swift */,
 			);
 			path = Playing;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				AFB83FAA2C5C76DA00E48896 /* InstrumentBar.swift in Sources */,
 				C73C83852C5A299B001B7540 /* OnboardingStartView.swift in Sources */,
 				C7D8AC992C5B890E001AB123 /* Device.swift in Sources */,
+				AFF48BD02C874105005D45D9 /* QuitPopoverView.swift in Sources */,
 				AFB83FAB2C5C76DA00E48896 /* SettingPopoverView.swift in Sources */,
 				AF11F9F12C57E2300009E685 /* SystemAudioClassifier.swift in Sources */,
 				B5C9B47D2C61014500FE4F81 /* SongViewModel.swift in Sources */,
