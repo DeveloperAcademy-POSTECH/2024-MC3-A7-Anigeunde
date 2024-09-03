@@ -273,6 +273,9 @@
         }
       }
     },
+    "연주를 완료하고 이전 화면으로 이동하시겠어요?" : {
+
+    },
     "완료" : {
       "localizations" : {
         "en" : {
@@ -312,6 +315,9 @@
           }
         }
       }
+    },
+    "이동하기" : {
+
     },
     "일렉" : {
       "localizations" : {
@@ -394,6 +400,7 @@
       }
     },
     "탐지할 악기 선택" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

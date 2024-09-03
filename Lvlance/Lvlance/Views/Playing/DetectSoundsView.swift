@@ -16,7 +16,8 @@ struct DetectSoundsView: View {
     @Binding var config: AppConfiguration
     @Binding var path: NavigationPath
     @State private var isLoading = false
-    var songTitle: String 
+    @State var isQuit = false
+    var songTitle: String
     
     static func generateMeter(confidence: Double, width: CGFloat, height: CGFloat, varientSize: Double) -> some View {
         GeometryReader { geometry in
@@ -86,11 +87,29 @@ struct DetectSoundsView: View {
         }
         .overlay(alignment: .topLeading){
             Text(songTitle)
-                .font(.system(size: 18))
+                .font(.system(size: 16))
                 .fontWeight(.semibold)
                 .padding(.leading, 60)
                 .padding(.top, 60)
         }
+        .overlay(alignment: .bottomTrailing){
+            Text("완료")
+                .font(.system(size: 16))
+                .fontWeight(.regular)
+                .padding(.vertical, 3)
+                .padding(.horizontal, 6)
+                .background(.systemPurple , in: .rect(cornerRadius: 4))
+                .padding(.trailing, 60)
+                .padding(.bottom, 60)
+                .onTapGesture {
+                    isQuit = true
+                }
+                .popover(isPresented: $isQuit) {
+                    QuitPopoverView(path: $path)
+                }
+                
+        }
+        
         .onDisappear{
             SystemAudioClassifier.singleton.stopSoundClassification()
         }
