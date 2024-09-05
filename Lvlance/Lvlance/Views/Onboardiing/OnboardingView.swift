@@ -9,7 +9,8 @@ import SwiftUI
 
 struct OnboardingView: View {
     @State private var currentStep = 0
-    @Binding var hasSeenOnboarding: Bool
+    @Binding var isShowOnboarding: Bool
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
     
     var body: some View {
         VStack {
@@ -47,6 +48,7 @@ struct OnboardingView: View {
                     action: {
                         currentStep += 1
                         hasSeenOnboarding = true
+                        isShowOnboarding = false
                     }
                 )
             default:

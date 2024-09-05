@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct BandSettingView: View {
-    @EnvironmentObject var audioManager: AudioManager
+    
     @StateObject var songViewModel = SongViewModel()
     
-    @State var isShowingMicrophoneSelector = false
     @State private var isAddingPresented = false
     @State private var isEditingPresented = false
     
@@ -44,20 +43,11 @@ struct BandSettingView: View {
             }
         }
         .frame(minWidth: 1510, minHeight: 834)
-        .sheet(isPresented: $isShowingMicrophoneSelector, content: {
-            MicSelectView(isShowingMicrophoneSelector: $isShowingMicrophoneSelector)
-        })
         .sheet(isPresented: $isEditingPresented, content: {
             InstrumentAddingView(songViewModel: songViewModel, isSheetPresented: $isEditingPresented, isEdit: true)
         })
         .sheet(isPresented: $isAddingPresented, content: {
             InstrumentAddingView(songViewModel: songViewModel, isSheetPresented: $isAddingPresented)
         })
-        .onAppear {
-            isShowingMicrophoneSelector = true
-            Task {
-                await audioManager.start()
-            }
-        }
     }
 }
