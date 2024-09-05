@@ -7,13 +7,30 @@
     "%@" : {
 
     },
+    "newSong" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Song"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새 노래"
+          }
+        }
+      }
+    },
     "onboarding.button.complete" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Complete"
+            "value" : "Done"
           }
         },
         "ko" : {
@@ -140,15 +157,11 @@
       }
     },
     "곡 제목" : {
-
-    },
-    "곡 제목 / " : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Song title /"
+            "value" : "title "
           }
         }
       }
@@ -248,7 +261,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Select"
+            "value" : "Done"
           }
         }
       }
@@ -274,14 +287,21 @@
       }
     },
     "연주를 완료하고 이전 화면으로 이동하시겠어요?" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you want to complete the performance and go to the previous screen?"
+          }
+        }
+      }
     },
     "완료" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Complete "
+            "value" : "Done"
           }
         }
       }
@@ -317,7 +337,14 @@
       }
     },
     "이동하기" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes"
+          }
+        }
+      }
     },
     "일렉" : {
       "localizations" : {
@@ -384,7 +411,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cancel"
+            "value" : "Exit"
           }
         }
       }
@@ -395,17 +422,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Keyboard"
-          }
-        }
-      }
-    },
-    "탐지할 악기 선택" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select the instrument to detect"
           }
         }
       }

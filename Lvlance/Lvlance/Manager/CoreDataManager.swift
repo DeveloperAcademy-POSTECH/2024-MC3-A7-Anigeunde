@@ -72,7 +72,7 @@ class CoreDataManager {
         newSong.date = Date()
         
         let songCount = getSongCounts()
-        newSong.title = "새 노래 \(songCount)"
+        newSong.title = String(localized: "newSong") +  " \(songCount)"
         
         for instrument in instruments {
             let newInstrument = InstrumentEntity(context: context)
