@@ -1,0 +1,130 @@
+//
+//  Instrument.swift
+//  Lvlance
+//
+//  Created by 지영 on 7/25/24.
+//
+
+import Foundation
+
+enum InstrumentType: String, CaseIterable {
+    case vocal // order 0
+    case keyboard // order 1
+    case electric // order 2
+    case drum // order 3
+    case bass // order 4
+
+    var soundLabel: String {
+        switch self {
+        case .vocal:
+            return "singing"
+        case .keyboard:
+            return "electric_piano"
+        case .electric:
+            return "electric_guitar"
+        case .drum:
+            return "drum"
+        case .bass:
+            return "bass_guitar"
+        }
+    }
+
+    var title: LocalizedStringResource {
+        switch self {
+        case .vocal:
+            return "보컬"
+        case .keyboard:
+            return "키보드"
+        case .electric:
+            return "일렉"
+        case .drum:
+            return "드럼"
+        case .bass:
+            return "베이스"
+        }
+    }
+
+    var order: Int {
+        switch self {
+        case .vocal:
+            return 0
+        case .keyboard:
+            return 1
+        case .electric:
+            return 2
+        case .drum:
+            return 3
+        case .bass:
+            return 4
+        }
+    }
+
+    var maskImage: String {
+        switch self {
+        case .vocal:
+            return "mask_singing"
+        case .keyboard:
+            return "mask_electric_piano"
+        case .electric:
+            return "mask_electric_guitar"
+        case .drum:
+            return "mask_drum"
+        case .bass:
+            return "mask_bass_guitar"
+        }
+    }
+
+    var outlineImage: String {
+        switch self {
+        case .vocal:
+            return "outline_singing"
+        case .keyboard:
+            return "outline_electric_piano"
+        case .electric:
+            return "outline_electric_guitar"
+        case .drum:
+            return "outline_drum"
+        case .bass:
+            return "outline_bass_guitar"
+        }
+    }
+    
+    var defaultDetectionState: DetectionState {
+            switch self {
+            case .vocal:
+                return DetectionState(presenceThreshold: 0.3, absenceThreshold: 0.15, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 30)
+            case .keyboard:
+                return DetectionState(presenceThreshold: 0.05, absenceThreshold: 0.02, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 27)
+            case .bass:
+                return DetectionState(presenceThreshold: 0.32, absenceThreshold: 0.2, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 30)
+            case .electric:
+                return DetectionState(presenceThreshold: 0.34, absenceThreshold: 0.23, presenceMeasurementsToStartDetection: 3, absenceMeasurementsToEndDetection: 30)
+            case .drum:
+                return DetectionState(presenceThreshold: 0.18, absenceThreshold: 0.1, presenceMeasurementsToStartDetection: 2, absenceMeasurementsToEndDetection: 30)
+            }
+        }
+    
+    var varientSize : Double {
+        switch self {
+        case .vocal:
+            return 1.3
+        case .keyboard:
+            return 2.1
+        case .bass:
+            return 1.3
+        case .electric:
+            return 1.2
+        case .drum:
+            return 1.5
+        }
+    }
+        
+    
+    
+}
+
+
+struct Instrument: Identifiable, Hashable {
+    let id = UUID()
+    let type: InstrumentType
+}
