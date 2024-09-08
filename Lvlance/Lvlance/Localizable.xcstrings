@@ -126,16 +126,6 @@
         }
       }
     },
-    "건너뛰기" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skip"
-          }
-        }
-      }
-    },
     "곡 삭제하기" : {
       "localizations" : {
         "en" : {
@@ -266,7 +256,7 @@
         }
       }
     },
-    "선택하신 디바이스가 밴드의 연주 소리를 입력합니다." : {
+    "선택하신 디바이스로 밴드의 연주 소리를 입력받습니다." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -362,16 +352,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select Input Device"
-          }
-        }
-      }
-    },
-    "입력 기기 설정을 할 필요가 없는 경우, 건너뛰기하세요" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "If you don't need to set up an input device, skip this step"
           }
         }
       }
