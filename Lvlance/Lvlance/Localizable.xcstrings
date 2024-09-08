@@ -7,6 +7,74 @@
     "%@" : {
 
     },
+    "Cancel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소"
+          }
+        }
+      }
+    },
+    "GoToSettings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go to Settings"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정으로 이동"
+          }
+        }
+      }
+    },
+    "MicrophoneAccessDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Microphone access is required to start playing. Please allow permission in the system settings."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연주를 시작하기 위해서는 마이크 접근 권한이 필요합니다. 시스템 설정에서 권한을 허용해주세요."
+          }
+        }
+      }
+    },
+    "MicrophoneAccessRequired" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Microphone Access Required"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마이크 접근 권한 필요"
+          }
+        }
+      }
+    },
     "newSong" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -122,16 +190,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "지금 바로 입력 기기를 연결하여 Lvlance를 사용해 보세요!"
-          }
-        }
-      }
-    },
-    "건너뛰기" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skip"
           }
         }
       }
@@ -266,7 +324,7 @@
         }
       }
     },
-    "선택하신 디바이스가 밴드의 연주 소리를 입력합니다." : {
+    "선택하신 디바이스로 밴드의 연주 소리를 입력받습니다." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -362,16 +420,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select Input Device"
-          }
-        }
-      }
-    },
-    "입력 기기 설정을 할 필요가 없는 경우, 건너뛰기하세요" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "If you don't need to set up an input device, skip this step"
           }
         }
       }
