@@ -25,20 +25,44 @@ struct SideBarView: View {
             songViewModel.selectedSong == nil
         }
     
+    private func requestMicrophonePermission() {
+        MicrophonePermissionManager.shared.requestMicrophonePermission { granted in
+            if granted {
+                self.startPlaying()
+            } else {
+                MicrophonePermissionManager.shared.showMicrophoneAccessAlert()
+            }
+        }
+    }
+    private func startPlaying(){
+        /// 선택된 노래의 악기 정보를 재생할 뷰에 넘겨주기
+        guard let selectedSong = songViewModel.selectedSong else { return }
+        
+        appConfig.monitoredSounds = Set(selectedSong.instruments.map {
+            SoundIdentifier(instrument: $0.type)
+        })
+        
+        appState.restartDetection(config: appConfig) // 재생시키기
+        path.append("playView")
+    }
+    
     var body: some View {
         VStack(alignment: .trailing ,spacing: 0) {
             Spacer().frame(height: 46)
             
             Button {
-                /// 선택된 노래의 악기 정보를 재생할 뷰에 넘겨주기
-                guard let selectedSong = songViewModel.selectedSong else { return }
                 
-                appConfig.monitoredSounds = Set(selectedSong.instruments.map {
-                    SoundIdentifier(instrument: $0.type)
-                })
+                MicrophonePermissionManager.shared.checkMicrophonePermission { status in
+                    switch status {
+                    case .notDetermined:
+                        self.requestMicrophonePermission()
+                    case .granted:
+                        self.startPlaying()
+                    case .denied:
+                        MicrophonePermissionManager.shared.showMicrophoneAccessAlert()
+                    }
+                }
                 
-                appState.restartDetection(config: appConfig) // 재생시키기
-                path.append("playView")
             } label: {
                 if isNoSongSelected {
                     Image(systemName: "play.fill")
