@@ -41,11 +41,11 @@ class MicrophonePermissionManager {
     
     func showMicrophoneAccessAlert() {
         let alert = NSAlert()
-        alert.messageText = "마이크 접근 권한 필요"
-        alert.informativeText = "이 기능을 사용하려면 마이크 접근 권한이 필요합니다. 시스템 설정에서 권한을 허용해주세요."
+        alert.messageText = NSLocalizedString("MicrophoneAccessRequired", comment: "Alert title for microphone access")
+        alert.informativeText = NSLocalizedString("MicrophoneAccessDescription", comment: "Description for microphone access requirement")
         alert.alertStyle = .warning
-        alert.addButton(withTitle: "설정으로 이동")
-        alert.addButton(withTitle: "취소")
+        alert.addButton(withTitle: NSLocalizedString("GoToSettings", comment: "Button to open settings"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "Cancel button"))
         
         let response = alert.runModal()
         if response == .alertFirstButtonReturn {
